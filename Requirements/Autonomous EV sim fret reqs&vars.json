@@ -1222,17 +1222,17 @@
             "reqs": [
                 "080dd590-d68a-11ef-867f-7339dad409a4"
             ],
-            "dataType": "",
-            "idType": "",
+            "dataType": "boolean",
+            "idType": "Internal",
             "moduleName": "",
-            "description": "",
-            "assignment": "",
+            "description": "Binary ON state",
+            "assignment": "1",
             "copilotAssignment": "",
             "modeRequirement": "",
             "modeldoc": false,
-            "modelComponent": "",
             "modeldoc_id": "",
-            "completed": false,
+            "modelComponent": "",
+            "completed": true,
             "_id": "Autonomous EV SimEV_diagnostics_systemON"
         },
         {
@@ -1242,17 +1242,17 @@
             "reqs": [
                 "080dd590-d68a-11ef-867f-7339dad409a4"
             ],
-            "dataType": "",
-            "idType": "",
+            "dataType": "boolean",
+            "idType": "Output",
             "moduleName": "",
-            "description": "",
+            "description": "System failure flag",
             "assignment": "",
             "copilotAssignment": "",
             "modeRequirement": "",
             "modeldoc": false,
-            "modelComponent": "",
             "modeldoc_id": "",
-            "completed": false,
+            "modelComponent": "",
+            "completed": true,
             "_id": "Autonomous EV SimEV_diagnostics_systemfailure_flag"
         },
         {
@@ -1262,17 +1262,17 @@
             "reqs": [
                 "438dc490-d68a-11ef-867f-7339dad409a4"
             ],
-            "dataType": "",
-            "idType": "",
+            "dataType": "unsigned integer",
+            "idType": "Internal",
             "moduleName": "",
-            "description": "",
-            "assignment": "",
+            "description": "Standard format for failure logs",
+            "assignment": "standard_diagnostic_reporting_format",
             "copilotAssignment": "",
             "modeRequirement": "",
             "modeldoc": false,
-            "modelComponent": "",
             "modeldoc_id": "",
-            "completed": false,
+            "modelComponent": "",
+            "completed": true,
             "_id": "Autonomous EV SimEV_diagnostics_systemfailure_log_format"
         },
         {
@@ -1283,16 +1283,16 @@
                 "080dd590-d68a-11ef-867f-7339dad409a4"
             ],
             "dataType": "",
-            "idType": "",
-            "moduleName": "",
-            "description": "",
+            "idType": "Function",
+            "moduleName": "SensorMonitor",
+            "description": "Sensor failure detection",
             "assignment": "",
             "copilotAssignment": "",
             "modeRequirement": "",
             "modeldoc": false,
-            "modelComponent": "",
             "modeldoc_id": "",
-            "completed": false,
+            "modelComponent": "",
+            "completed": true,
             "_id": "Autonomous EV SimEV_diagnostics_systemsensor_malfunction"
         },
         {
@@ -1302,17 +1302,17 @@
             "reqs": [
                 "7af05890-d689-11ef-867f-7339dad409a4"
             ],
-            "dataType": "",
-            "idType": "",
+            "dataType": "unsigned integer",
+            "idType": "Input",
             "moduleName": "",
-            "description": "",
+            "description": "Diagnostic report format",
             "assignment": "",
             "copilotAssignment": "",
             "modeRequirement": "",
             "modeldoc": false,
-            "modelComponent": "",
             "modeldoc_id": "",
-            "completed": false,
+            "modelComponent": "",
+            "completed": true,
             "_id": "Autonomous EV SimEV_diagnostics_systemstandard_diagnostic_reporting_format"
         },
         {
