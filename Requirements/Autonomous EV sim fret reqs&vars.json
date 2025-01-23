@@ -3,7 +3,7 @@
         {
             "reqid": "REQ-05.02",
             "parent_reqid": "REQ-05",
-            "project": "Autonomous EV Sim",
+            "project": "ELEVATE",
             "rationale": "Ensures pedestrian safety at crossings.",
             "comments": "Covers both marked and unmarked crossings.",
             "fulltext": "Upon  pedestrian_detected  the  EV_navigation_system  shall  immediately  satisfy  stopping_action ",
@@ -73,7 +73,7 @@
         {
             "reqid": "REQ-02.01",
             "parent_reqid": "REQ-02",
-            "project": "Autonomous EV Sim",
+            "project": "ELEVATE",
             "rationale": "Enables timely detection and repair of critical components.",
             "comments": "Ensure that diagnostics are specific to the failed sensor type.",
             "fulltext": " If sensor_malfunction = ON  the  EV_diagnostics_system  shall  immediately  satisfy  failure_flag = ON ",
@@ -144,7 +144,7 @@
         {
             "reqid": "REQ-04",
             "parent_reqid": "",
-            "project": "Autonomous EV Sim",
+            "project": "ELEVATE",
             "rationale": "Prevents accidents by maintaining safe distances from other vehicles and obstacles.",
             "comments": "Includes scenarios for sudden braking, emergency situations, and dynamic proximity management.",
             "fulltext": "The  EV_collision_avoidance_system  shall always satisfy  distance_to_obstacle >= 2 ",
@@ -202,7 +202,7 @@
         {
             "reqid": "REQ-03.01",
             "parent_reqid": "REQ-03",
-            "project": "Autonomous EV Sim",
+            "project": "ELEVATE",
             "rationale": "Minimises delays by adapting to real-time traffic data.",
             "comments": "Test scenarios with sudden congestion in major routes.",
             "fulltext": "Upon  traffic_jam_detected = ON  the  EV_navigation_system  shall  immediately  satisfy  optimal_route_update ",
@@ -273,7 +273,7 @@
         {
             "reqid": "REQ-01.04",
             "parent_reqid": "REQ-01",
-            "project": "Autonomous EV Sim",
+            "project": "ELEVATE",
             "rationale": "Reduces strain on grid during peak hours.",
             "comments": "Integrate predictive algorithms to improve scheduling accuracy.",
             "fulltext": "Upon  receipt_of_charging_request_command & grid_load = low  the  EV_energy_management_system  shall  always  satisfy  grid_load = low ",
@@ -344,7 +344,7 @@
         {
             "reqid": "REQ-01.02",
             "parent_reqid": "REQ-01",
-            "project": "Autonomous EV Sim",
+            "project": "ELEVATE",
             "rationale": "Prevents overcharging and potential battery damage.",
             "comments": "Included with safety checks for sudden battery level anomalies.",
             "fulltext": "The  EV_energy_management_system  shall always satisfy  battery_level <= 100/100 ",
@@ -402,7 +402,7 @@
         {
             "reqid": "REQ-02.02",
             "parent_reqid": "REQ-02",
-            "project": "Autonomous EV Sim",
+            "project": "ELEVATE",
             "rationale": "Ensures proper tracking and resolution of communication errors.",
             "comments": "Include timestamps and error codes in logs.",
             "fulltext": " EV_diagnostics_system  shall always satisfy  failure_log_format ",
@@ -460,7 +460,7 @@
         {
             "reqid": "REQ-05.03",
             "parent_reqid": "REQ-05",
-            "project": "Autonomous EV Sim",
+            "project": "ELEVATE",
             "rationale": "Safely handles transitional traffic light states.",
             "comments": "Include tests for borderline cases with high speeds.",
             "fulltext": "Upon ( traffic_light_state = YELLOW  &  distance_to_light < 20 )  EV_navigation_system  shall at the next timepoint satisfy  stopping_action = ON ",
@@ -533,7 +533,7 @@
         {
             "reqid": "REQ-04.01",
             "parent_reqid": "REQ-04",
-            "project": "Autonomous EV Sim",
+            "project": "ELEVATE",
             "rationale": "Reduces risk pf rear-end collisions.",
             "comments": "Test scenarios with varying road conditions and speeds.",
             "fulltext": "The  EV_collision_avoidance_system  shall always satisfy  distance_to_vehicle_ahead >= 10 ",
@@ -591,7 +591,7 @@
         {
             "reqid": "REQ-02",
             "parent_reqid": "",
-            "project": "Autonomous EV Sim",
+            "project": "ELEVATE",
             "rationale": "Ensures consistent reporting for effective issue tracking and maintenance.",
             "comments": "Applies to fault detection, communication issues, and system performance logs.",
             "fulltext": " EV_diagnostics_system  shall always satisfy  standard_diagnostic_reporting_format ",
@@ -649,7 +649,7 @@
         {
             "reqid": "REQ-03.02",
             "parent_reqid": "REQ-03",
-            "project": "Autonomous EV Sim",
+            "project": "ELEVATE",
             "rationale": "Prevents vehicles from running out of charge in transit.",
             "comments": "Test with sparse charging networks.",
             "fulltext": " EV_navigation_system  shall always satisfy if preBool(false,  battery_level < 20/100  & !(  charging_station_nearby )) then  continue_search_for_station = ON ",
@@ -710,7 +710,7 @@
         {
             "reqid": "REQ-01.01",
             "parent_reqid": "REQ-01",
-            "project": "Autonomous EV Sim",
+            "project": "ELEVATE",
             "rationale": "Minimise non-critical EV operations to prolong battery life.",
             "comments": "Include alert generation when entering low power mode.",
             "fulltext": " EV_energy_management_system  shall always satisfy if ( EV_state = moving  &  battery_level < 20 ) then  low_power_mode = ON ",
@@ -772,7 +772,7 @@
         {
             "reqid": "REQ-05",
             "parent_reqid": "",
-            "project": "Autonomous EV Sim",
+            "project": "ELEVATE",
             "rationale": "Ensures the EV adheres to traffic rules and operates safely within legal boundaries.",
             "comments": "This encompasses stopping at traffic lights, yielding to pedestrians, and adapting to road signs.",
             "fulltext": " EV_navigation_system  shall always satisfy if ( traffic_rules = ACTIVE  &  road_conditions = NORMAL ) then  traffic_compliance = ON ",
@@ -835,7 +835,7 @@
         {
             "reqid": "REQ-05.01",
             "parent_reqid": "REQ-05",
-            "project": "Autonomous EV Sim",
+            "project": "ELEVATE",
             "rationale": "",
             "comments": "",
             "fulltext": " EV_navigation_system  shall always satisfy if ( traffic_light_state = RED  &  distance_to_light < 50 ) then  stopping_action = ON ",
@@ -897,7 +897,7 @@
         {
             "reqid": "REQ-05.04",
             "parent_reqid": "REQ-05",
-            "project": "Autonomous EV Sim",
+            "project": "ELEVATE",
             "rationale": "Ensures compliance with traffic laws requiring vehicles to yield to emergency responders.",
             "comments": "Ensure emergency vehicle detection accuracy is high.",
             "fulltext": " EV_navigation_system  shall always satisfy if ( emergency_vehicle_detected = ON  &  distance_to_emergency_vehicle < 20 ) then  stopping_action = ON ",
@@ -958,7 +958,7 @@
         {
             "reqid": "REQ-03",
             "parent_reqid": "",
-            "project": "Autonomous EV Sim",
+            "project": "ELEVATE",
             "rationale": "Dynamically adjusts routing to reduce delays and improve overall efficiency.",
             "comments": "Covers real-time re-routing and prioritization of charging stations.",
             "fulltext": "Upon ( traffic_conditions = CONGESTED  &  EV_routing_request = ON )  EV_navigation_system  shall at the next timepoint satisfy  updated_route = OPTIMAL ",
@@ -1032,7 +1032,7 @@
         {
             "reqid": "REQ-01.03",
             "parent_reqid": "REQ-01",
-            "project": "Autonomous EV Sim",
+            "project": "ELEVATE",
             "rationale": "Stabilises grid during peak electricity demand using EVs as distributed storage units.",
             "comments": "Puts focus on testing grid demand prediction algorithms.",
             "fulltext": " If grid_demand_peak = YES  the  EV_energy_management_system  shall  within 5 seconds  satisfy  EV_discharge_mode = ON ",
@@ -1105,7 +1105,7 @@
         {
             "reqid": "REQ-01",
             "parent_reqid": "",
-            "project": "Autonomous EV Sim",
+            "project": "ELEVATE",
             "rationale": "Enables efficient battery management to prolong operational time and support grid stabilisation.",
             "comments": "Includes managing low battery alerts, charging schedules, and grid integration. 'optimal_battery_usage' is a binary state value, '1' is true and '0' is false.",
             "fulltext": " If energy_efficiency_mode = ON  the  EV_energy_management_system  shall  immediately  satisfy  optimal_battery_usage = ON ",
@@ -1176,7 +1176,7 @@
     ],
     "variables": [
         {
-            "project": "Autonomous EV Sim",
+            "project": "ELEVATE",
             "component_name": "EV_collision_avoidance_system",
             "variable_name": "distance_to_obstacle",
             "reqs": [
@@ -1193,10 +1193,10 @@
             "modeldoc_id": "",
             "modelComponent": "",
             "completed": true,
-            "_id": "Autonomous EV SimEV_collision_avoidance_systemdistance_to_obstacle"
+            "_id": "ELEVATEEV_collision_avoidance_systemdistance_to_obstacle"
         },
         {
-            "project": "Autonomous EV Sim",
+            "project": "ELEVATE",
             "component_name": "EV_collision_avoidance_system",
             "variable_name": "distance_to_vehicle_ahead",
             "reqs": [
@@ -1213,10 +1213,10 @@
             "modeldoc_id": "",
             "modelComponent": "",
             "completed": true,
-            "_id": "Autonomous EV SimEV_collision_avoidance_systemdistance_to_vehicle_ahead"
+            "_id": "ELEVATEEV_collision_avoidance_systemdistance_to_vehicle_ahead"
         },
         {
-            "project": "Autonomous EV Sim",
+            "project": "ELEVATE",
             "component_name": "EV_diagnostics_system",
             "variable_name": "ON",
             "reqs": [
@@ -1233,10 +1233,10 @@
             "modeldoc_id": "",
             "modelComponent": "",
             "completed": true,
-            "_id": "Autonomous EV SimEV_diagnostics_systemON"
+            "_id": "ELEVATEEV_diagnostics_systemON"
         },
         {
-            "project": "Autonomous EV Sim",
+            "project": "ELEVATE",
             "component_name": "EV_diagnostics_system",
             "variable_name": "failure_flag",
             "reqs": [
@@ -1253,10 +1253,10 @@
             "modeldoc_id": "",
             "modelComponent": "",
             "completed": true,
-            "_id": "Autonomous EV SimEV_diagnostics_systemfailure_flag"
+            "_id": "ELEVATEEV_diagnostics_systemfailure_flag"
         },
         {
-            "project": "Autonomous EV Sim",
+            "project": "ELEVATE",
             "component_name": "EV_diagnostics_system",
             "variable_name": "failure_log_format",
             "reqs": [
@@ -1273,10 +1273,10 @@
             "modeldoc_id": "",
             "modelComponent": "",
             "completed": true,
-            "_id": "Autonomous EV SimEV_diagnostics_systemfailure_log_format"
+            "_id": "ELEVATEEV_diagnostics_systemfailure_log_format"
         },
         {
-            "project": "Autonomous EV Sim",
+            "project": "ELEVATE",
             "component_name": "EV_diagnostics_system",
             "variable_name": "sensor_malfunction",
             "reqs": [
@@ -1293,10 +1293,10 @@
             "modeldoc_id": "",
             "modelComponent": "",
             "completed": true,
-            "_id": "Autonomous EV SimEV_diagnostics_systemsensor_malfunction"
+            "_id": "ELEVATEEV_diagnostics_systemsensor_malfunction"
         },
         {
-            "project": "Autonomous EV Sim",
+            "project": "ELEVATE",
             "component_name": "EV_diagnostics_system",
             "variable_name": "standard_diagnostic_reporting_format",
             "reqs": [
@@ -1313,10 +1313,10 @@
             "modeldoc_id": "",
             "modelComponent": "",
             "completed": true,
-            "_id": "Autonomous EV SimEV_diagnostics_systemstandard_diagnostic_reporting_format"
+            "_id": "ELEVATEEV_diagnostics_systemstandard_diagnostic_reporting_format"
         },
         {
-            "project": "Autonomous EV Sim",
+            "project": "ELEVATE",
             "component_name": "EV_energy_management_system",
             "variable_name": "EV_discharge_mode",
             "reqs": [
@@ -1333,10 +1333,10 @@
             "modeldoc_id": "",
             "modelComponent": "",
             "completed": true,
-            "_id": "Autonomous EV SimEV_energy_management_systemEV_discharge_mode"
+            "_id": "ELEVATEEV_energy_management_systemEV_discharge_mode"
         },
         {
-            "project": "Autonomous EV Sim",
+            "project": "ELEVATE",
             "component_name": "EV_energy_management_system",
             "variable_name": "EV_state",
             "reqs": [
@@ -1353,10 +1353,10 @@
             "modeldoc_id": "",
             "modelComponent": "",
             "completed": true,
-            "_id": "Autonomous EV SimEV_energy_management_systemEV_state"
+            "_id": "ELEVATEEV_energy_management_systemEV_state"
         },
         {
-            "project": "Autonomous EV Sim",
+            "project": "ELEVATE",
             "component_name": "EV_energy_management_system",
             "variable_name": "ON",
             "reqs": [
@@ -1375,10 +1375,10 @@
             "modeldoc_id": "",
             "modelComponent": "",
             "completed": true,
-            "_id": "Autonomous EV SimEV_energy_management_systemON"
+            "_id": "ELEVATEEV_energy_management_systemON"
         },
         {
-            "project": "Autonomous EV Sim",
+            "project": "ELEVATE",
             "component_name": "EV_energy_management_system",
             "variable_name": "YES",
             "reqs": [
@@ -1395,10 +1395,10 @@
             "modeldoc_id": "",
             "modelComponent": "",
             "completed": true,
-            "_id": "Autonomous EV SimEV_energy_management_systemYES"
+            "_id": "ELEVATEEV_energy_management_systemYES"
         },
         {
-            "project": "Autonomous EV Sim",
+            "project": "ELEVATE",
             "component_name": "EV_energy_management_system",
             "variable_name": "battery_level",
             "reqs": [
@@ -1416,10 +1416,10 @@
             "modeldoc_id": "",
             "modelComponent": "",
             "completed": true,
-            "_id": "Autonomous EV SimEV_energy_management_systembattery_level"
+            "_id": "ELEVATEEV_energy_management_systembattery_level"
         },
         {
-            "project": "Autonomous EV Sim",
+            "project": "ELEVATE",
             "component_name": "EV_energy_management_system",
             "variable_name": "energy_efficiency_mode",
             "reqs": [
@@ -1436,10 +1436,10 @@
             "modeldoc_id": "",
             "modelComponent": "",
             "completed": true,
-            "_id": "Autonomous EV SimEV_energy_management_systemenergy_efficiency_mode"
+            "_id": "ELEVATEEV_energy_management_systemenergy_efficiency_mode"
         },
         {
-            "project": "Autonomous EV Sim",
+            "project": "ELEVATE",
             "component_name": "EV_energy_management_system",
             "variable_name": "grid_demand_peak",
             "reqs": [
@@ -1456,10 +1456,10 @@
             "modeldoc_id": "",
             "modelComponent": "",
             "completed": true,
-            "_id": "Autonomous EV SimEV_energy_management_systemgrid_demand_peak"
+            "_id": "ELEVATEEV_energy_management_systemgrid_demand_peak"
         },
         {
-            "project": "Autonomous EV Sim",
+            "project": "ELEVATE",
             "component_name": "EV_energy_management_system",
             "variable_name": "grid_load",
             "reqs": [
@@ -1476,10 +1476,10 @@
             "modeldoc_id": "",
             "modelComponent": "",
             "completed": true,
-            "_id": "Autonomous EV SimEV_energy_management_systemgrid_load"
+            "_id": "ELEVATEEV_energy_management_systemgrid_load"
         },
         {
-            "project": "Autonomous EV Sim",
+            "project": "ELEVATE",
             "component_name": "EV_energy_management_system",
             "variable_name": "low",
             "reqs": [
@@ -1496,10 +1496,10 @@
             "modeldoc_id": "",
             "modelComponent": "",
             "completed": true,
-            "_id": "Autonomous EV SimEV_energy_management_systemlow"
+            "_id": "ELEVATEEV_energy_management_systemlow"
         },
         {
-            "project": "Autonomous EV Sim",
+            "project": "ELEVATE",
             "component_name": "EV_energy_management_system",
             "variable_name": "low_power_mode",
             "reqs": [
@@ -1516,10 +1516,10 @@
             "modeldoc_id": "",
             "modelComponent": "",
             "completed": true,
-            "_id": "Autonomous EV SimEV_energy_management_systemlow_power_mode"
+            "_id": "ELEVATEEV_energy_management_systemlow_power_mode"
         },
         {
-            "project": "Autonomous EV Sim",
+            "project": "ELEVATE",
             "component_name": "EV_energy_management_system",
             "variable_name": "moving",
             "reqs": [
@@ -1536,10 +1536,10 @@
             "modeldoc_id": "",
             "modelComponent": "",
             "completed": true,
-            "_id": "Autonomous EV SimEV_energy_management_systemmoving"
+            "_id": "ELEVATEEV_energy_management_systemmoving"
         },
         {
-            "project": "Autonomous EV Sim",
+            "project": "ELEVATE",
             "component_name": "EV_energy_management_system",
             "variable_name": "optimal_battery_usage",
             "reqs": [
@@ -1556,10 +1556,10 @@
             "modeldoc_id": "",
             "modelComponent": "",
             "completed": true,
-            "_id": "Autonomous EV SimEV_energy_management_systemoptimal_battery_usage"
+            "_id": "ELEVATEEV_energy_management_systemoptimal_battery_usage"
         },
         {
-            "project": "Autonomous EV Sim",
+            "project": "ELEVATE",
             "component_name": "EV_energy_management_system",
             "variable_name": "receipt_of_charging_request_command",
             "reqs": [
@@ -1576,10 +1576,10 @@
             "modeldoc_id": "",
             "modelComponent": "",
             "completed": true,
-            "_id": "Autonomous EV SimEV_energy_management_systemreceipt_of_charging_request_command"
+            "_id": "ELEVATEEV_energy_management_systemreceipt_of_charging_request_command"
         },
         {
-            "project": "Autonomous EV Sim",
+            "project": "ELEVATE",
             "component_name": "EV_navigation_system",
             "variable_name": "ACTIVE",
             "reqs": [
@@ -1596,10 +1596,10 @@
             "modeldoc_id": "",
             "modelComponent": "",
             "completed": true,
-            "_id": "Autonomous EV SimEV_navigation_systemACTIVE"
+            "_id": "ELEVATEEV_navigation_systemACTIVE"
         },
         {
-            "project": "Autonomous EV Sim",
+            "project": "ELEVATE",
             "component_name": "EV_navigation_system",
             "variable_name": "CONGESTED",
             "reqs": [
@@ -1616,10 +1616,10 @@
             "modeldoc_id": "",
             "modelComponent": "",
             "completed": true,
-            "_id": "Autonomous EV SimEV_navigation_systemCONGESTED"
+            "_id": "ELEVATEEV_navigation_systemCONGESTED"
         },
         {
-            "project": "Autonomous EV Sim",
+            "project": "ELEVATE",
             "component_name": "EV_navigation_system",
             "variable_name": "EV_routing_request",
             "reqs": [
@@ -1636,10 +1636,10 @@
             "modeldoc_id": "",
             "modelComponent": "",
             "completed": true,
-            "_id": "Autonomous EV SimEV_navigation_systemEV_routing_request"
+            "_id": "ELEVATEEV_navigation_systemEV_routing_request"
         },
         {
-            "project": "Autonomous EV Sim",
+            "project": "ELEVATE",
             "component_name": "EV_navigation_system",
             "variable_name": "NORMAL",
             "reqs": [
@@ -1656,10 +1656,10 @@
             "modeldoc_id": "",
             "modelComponent": "",
             "completed": true,
-            "_id": "Autonomous EV SimEV_navigation_systemNORMAL"
+            "_id": "ELEVATEEV_navigation_systemNORMAL"
         },
         {
-            "project": "Autonomous EV Sim",
+            "project": "ELEVATE",
             "component_name": "EV_navigation_system",
             "variable_name": "ON",
             "reqs": [
@@ -1682,10 +1682,10 @@
             "modeldoc_id": "",
             "modelComponent": "",
             "completed": true,
-            "_id": "Autonomous EV SimEV_navigation_systemON"
+            "_id": "ELEVATEEV_navigation_systemON"
         },
         {
-            "project": "Autonomous EV Sim",
+            "project": "ELEVATE",
             "component_name": "EV_navigation_system",
             "variable_name": "OPTIMAL",
             "reqs": [
@@ -1702,10 +1702,10 @@
             "modeldoc_id": "",
             "modelComponent": "",
             "completed": true,
-            "_id": "Autonomous EV SimEV_navigation_systemOPTIMAL"
+            "_id": "ELEVATEEV_navigation_systemOPTIMAL"
         },
         {
-            "project": "Autonomous EV Sim",
+            "project": "ELEVATE",
             "component_name": "EV_navigation_system",
             "variable_name": "RED",
             "reqs": [
@@ -1722,10 +1722,10 @@
             "modeldoc_id": "",
             "modelComponent": "",
             "completed": true,
-            "_id": "Autonomous EV SimEV_navigation_systemRED"
+            "_id": "ELEVATEEV_navigation_systemRED"
         },
         {
-            "project": "Autonomous EV Sim",
+            "project": "ELEVATE",
             "component_name": "EV_navigation_system",
             "variable_name": "YELLOW",
             "reqs": [
@@ -1742,10 +1742,10 @@
             "modeldoc_id": "",
             "modelComponent": "",
             "completed": true,
-            "_id": "Autonomous EV SimEV_navigation_systemYELLOW"
+            "_id": "ELEVATEEV_navigation_systemYELLOW"
         },
         {
-            "project": "Autonomous EV Sim",
+            "project": "ELEVATE",
             "component_name": "EV_navigation_system",
             "variable_name": "battery_level",
             "reqs": [
@@ -1762,10 +1762,10 @@
             "modeldoc_id": "",
             "modelComponent": "",
             "completed": true,
-            "_id": "Autonomous EV SimEV_navigation_systembattery_level"
+            "_id": "ELEVATEEV_navigation_systembattery_level"
         },
         {
-            "project": "Autonomous EV Sim",
+            "project": "ELEVATE",
             "component_name": "EV_navigation_system",
             "variable_name": "charging_station_nearby",
             "reqs": [
@@ -1782,10 +1782,10 @@
             "modeldoc_id": "",
             "modelComponent": "",
             "completed": true,
-            "_id": "Autonomous EV SimEV_navigation_systemcharging_station_nearby"
+            "_id": "ELEVATEEV_navigation_systemcharging_station_nearby"
         },
         {
-            "project": "Autonomous EV Sim",
+            "project": "ELEVATE",
             "component_name": "EV_navigation_system",
             "variable_name": "continue_search_for_station",
             "reqs": [
@@ -1802,10 +1802,10 @@
             "modeldoc_id": "",
             "modelComponent": "",
             "completed": true,
-            "_id": "Autonomous EV SimEV_navigation_systemcontinue_search_for_station"
+            "_id": "ELEVATEEV_navigation_systemcontinue_search_for_station"
         },
         {
-            "project": "Autonomous EV Sim",
+            "project": "ELEVATE",
             "component_name": "EV_navigation_system",
             "variable_name": "distance_to_emergency_vehicle",
             "reqs": [
@@ -1822,10 +1822,10 @@
             "modeldoc_id": "",
             "modelComponent": "",
             "completed": true,
-            "_id": "Autonomous EV SimEV_navigation_systemdistance_to_emergency_vehicle"
+            "_id": "ELEVATEEV_navigation_systemdistance_to_emergency_vehicle"
         },
         {
-            "project": "Autonomous EV Sim",
+            "project": "ELEVATE",
             "component_name": "EV_navigation_system",
             "variable_name": "distance_to_light",
             "reqs": [
@@ -1843,10 +1843,10 @@
             "modeldoc_id": "",
             "modelComponent": "",
             "completed": true,
-            "_id": "Autonomous EV SimEV_navigation_systemdistance_to_light"
+            "_id": "ELEVATEEV_navigation_systemdistance_to_light"
         },
         {
-            "project": "Autonomous EV Sim",
+            "project": "ELEVATE",
             "component_name": "EV_navigation_system",
             "variable_name": "emergency_vehicle_detected",
             "reqs": [
@@ -1863,10 +1863,10 @@
             "modeldoc_id": "",
             "modelComponent": "",
             "completed": true,
-            "_id": "Autonomous EV SimEV_navigation_systememergency_vehicle_detected"
+            "_id": "ELEVATEEV_navigation_systememergency_vehicle_detected"
         },
         {
-            "project": "Autonomous EV Sim",
+            "project": "ELEVATE",
             "component_name": "EV_navigation_system",
             "variable_name": "optimal_route_update",
             "reqs": [
@@ -1883,10 +1883,10 @@
             "modeldoc_id": "",
             "modelComponent": "",
             "completed": true,
-            "_id": "Autonomous EV SimEV_navigation_systemoptimal_route_update"
+            "_id": "ELEVATEEV_navigation_systemoptimal_route_update"
         },
         {
-            "project": "Autonomous EV Sim",
+            "project": "ELEVATE",
             "component_name": "EV_navigation_system",
             "variable_name": "pedestrian_detected",
             "reqs": [
@@ -1903,10 +1903,10 @@
             "modeldoc_id": "",
             "modelComponent": "",
             "completed": true,
-            "_id": "Autonomous EV SimEV_navigation_systempedestrian_detected"
+            "_id": "ELEVATEEV_navigation_systempedestrian_detected"
         },
         {
-            "project": "Autonomous EV Sim",
+            "project": "ELEVATE",
             "component_name": "EV_navigation_system",
             "variable_name": "road_conditions",
             "reqs": [
@@ -1923,10 +1923,10 @@
             "modeldoc_id": "",
             "modelComponent": "",
             "completed": true,
-            "_id": "Autonomous EV SimEV_navigation_systemroad_conditions"
+            "_id": "ELEVATEEV_navigation_systemroad_conditions"
         },
         {
-            "project": "Autonomous EV Sim",
+            "project": "ELEVATE",
             "component_name": "EV_navigation_system",
             "variable_name": "stopping_action",
             "reqs": [
@@ -1946,10 +1946,10 @@
             "modeldoc_id": "",
             "modelComponent": "",
             "completed": true,
-            "_id": "Autonomous EV SimEV_navigation_systemstopping_action"
+            "_id": "ELEVATEEV_navigation_systemstopping_action"
         },
         {
-            "project": "Autonomous EV Sim",
+            "project": "ELEVATE",
             "component_name": "EV_navigation_system",
             "variable_name": "traffic_compliance",
             "reqs": [
@@ -1966,10 +1966,10 @@
             "modeldoc_id": "",
             "modelComponent": "",
             "completed": true,
-            "_id": "Autonomous EV SimEV_navigation_systemtraffic_compliance"
+            "_id": "ELEVATEEV_navigation_systemtraffic_compliance"
         },
         {
-            "project": "Autonomous EV Sim",
+            "project": "ELEVATE",
             "component_name": "EV_navigation_system",
             "variable_name": "traffic_conditions",
             "reqs": [
@@ -1986,10 +1986,10 @@
             "modeldoc_id": "",
             "modelComponent": "",
             "completed": true,
-            "_id": "Autonomous EV SimEV_navigation_systemtraffic_conditions"
+            "_id": "ELEVATEEV_navigation_systemtraffic_conditions"
         },
         {
-            "project": "Autonomous EV Sim",
+            "project": "ELEVATE",
             "component_name": "EV_navigation_system",
             "variable_name": "traffic_jam_detected",
             "reqs": [
@@ -2006,10 +2006,10 @@
             "modeldoc_id": "",
             "modelComponent": "",
             "completed": true,
-            "_id": "Autonomous EV SimEV_navigation_systemtraffic_jam_detected"
+            "_id": "ELEVATEEV_navigation_systemtraffic_jam_detected"
         },
         {
-            "project": "Autonomous EV Sim",
+            "project": "ELEVATE",
             "component_name": "EV_navigation_system",
             "variable_name": "traffic_light_state",
             "reqs": [
@@ -2027,10 +2027,10 @@
             "modeldoc_id": "",
             "modelComponent": "",
             "completed": true,
-            "_id": "Autonomous EV SimEV_navigation_systemtraffic_light_state"
+            "_id": "ELEVATEEV_navigation_systemtraffic_light_state"
         },
         {
-            "project": "Autonomous EV Sim",
+            "project": "ELEVATE",
             "component_name": "EV_navigation_system",
             "variable_name": "traffic_rules",
             "reqs": [
@@ -2047,10 +2047,10 @@
             "modeldoc_id": "",
             "modelComponent": "",
             "completed": true,
-            "_id": "Autonomous EV SimEV_navigation_systemtraffic_rules"
+            "_id": "ELEVATEEV_navigation_systemtraffic_rules"
         },
         {
-            "project": "Autonomous EV Sim",
+            "project": "ELEVATE",
             "component_name": "EV_navigation_system",
             "variable_name": "updated_route",
             "reqs": [
@@ -2067,7 +2067,7 @@
             "modeldoc_id": "",
             "modelComponent": "",
             "completed": true,
-            "_id": "Autonomous EV SimEV_navigation_systemupdated_route"
+            "_id": "ELEVATEEV_navigation_systemupdated_route"
         }
     ]
 }
