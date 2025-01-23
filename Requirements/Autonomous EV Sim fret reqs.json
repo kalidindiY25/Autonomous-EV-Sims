@@ -67,7 +67,7 @@
             "component": "EV_navigation_system"
         },
         "status": "in progress",
-        "_id": "0dc617b0-d692-11ef-b388-fde3cac4a3e9"
+        "_id": "1fb8b190-d97a-11ef-b40c-8d159b9c3e60"
     },
     {
         "reqid": "REQ-02.01",
@@ -138,7 +138,7 @@
             "component": "EV_diagnostics_system"
         },
         "status": "in progress",
-        "_id": "0dc617b1-d692-11ef-b388-fde3cac4a3e9"
+        "_id": "1fb8b191-d97a-11ef-b40c-8d159b9c3e60"
     },
     {
         "reqid": "REQ-04",
@@ -146,7 +146,7 @@
         "project": "Autonomous EV Sim",
         "rationale": "Prevents accidents by maintaining safe distances from other vehicles and obstacles.",
         "comments": "Includes scenarios for sudden braking, emergency situations, and dynamic proximity management.",
-        "fulltext": "The  EV_collision_avoidance_system  shall always satisfy  distance_to_obstacle >= SAFE_DISTANCE ",
+        "fulltext": "The  EV_collision_avoidance_system  shall always satisfy  distance_to_obstacle >= 2 ",
         "semantics": {
             "type": "nasa",
             "scope": {
@@ -156,8 +156,7 @@
             "timing": "always",
             "response": "satisfaction",
             "variables": [
-                "distance_to_obstacle",
-                "SAFE_DISTANCE"
+                "distance_to_obstacle"
             ],
             "component_name": "EV_collision_avoidance_system",
             "componentTextRange": [
@@ -168,36 +167,36 @@
                 42,
                 47
             ],
-            "post_condition": "(distance_to_obstacle >= SAFE_DISTANCE)",
+            "post_condition": "(distance_to_obstacle >= 2)",
             "responseTextRange": [
                 49,
-                94
+                82
             ],
-            "diagramVariables": "Response = <b><i>(distance_to_obstacle >= SAFE_DISTANCE)</i></b>.",
+            "diagramVariables": "Response = <b><i>(distance_to_obstacle >= 2)</i></b>.",
             "description": "ENFORCED: in the interval defined by the entire execution.\nTRIGGER: first point in the interval.\nREQUIRES: for every trigger, RES must hold at all time points between (and including) the trigger and the end of the interval.",
             "diagram": "_media/user-interface/examples/svgDiagrams/null_null_always_satisfaction.svg",
             "scope_mode_pt": "BAD_PT",
             "scope_mode_ft": "BAD_FT",
-            "post_condition_unexp_pt": "(distance_to_obstacle >= SAFE_DISTANCE)",
-            "post_condition_unexp_ft": "(distance_to_obstacle >= SAFE_DISTANCE)",
-            "post_condition_SMV_pt": "(distance_to_obstacle >= SAFE_DISTANCE)",
-            "post_condition_SMV_ft": "(distance_to_obstacle >= SAFE_DISTANCE)",
+            "post_condition_unexp_pt": "(distance_to_obstacle >= 2)",
+            "post_condition_unexp_ft": "(distance_to_obstacle >= 2)",
+            "post_condition_SMV_pt": "(distance_to_obstacle >= 2)",
+            "post_condition_SMV_ft": "(distance_to_obstacle >= 2)",
             "ft_fetched": "(LAST V $post_condition_unexp_ft$)",
-            "ft": "(LAST V (distance_to_obstacle >= SAFE_DISTANCE))",
+            "ft": "(LAST V (distance_to_obstacle >= 2))",
             "pt_fetched": "(H $post_condition_unexp_pt$)",
-            "pt": "(H (distance_to_obstacle >= SAFE_DISTANCE))",
+            "pt": "(H (distance_to_obstacle >= 2))",
             "ptExpanded_fetched": "(H $post_condition_SMV_pt$)",
-            "ptExpanded": "(H (distance_to_obstacle >= SAFE_DISTANCE))",
-            "CoCoSpecCode": "H((distance_to_obstacle >= SAFE_DISTANCE))",
+            "ptExpanded": "(H (distance_to_obstacle >= 2))",
+            "CoCoSpecCode": "H((distance_to_obstacle >= 2))",
             "ftExpanded_fetched": "(LAST V $post_condition_SMV_ft$)",
-            "ftExpandedUnoptimized": "(LAST V (distance_to_obstacle >= SAFE_DISTANCE))",
-            "ftExpanded": "(LAST V (distance_to_obstacle >= SAFE_DISTANCE))",
+            "ftExpandedUnoptimized": "(LAST V (distance_to_obstacle >= 2))",
+            "ftExpanded": "(LAST V (distance_to_obstacle >= 2))",
             "ftInfAUExpanded_fetched": "(G $post_condition_SMV_ft$)",
-            "ftInfAUExpanded": "(G (distance_to_obstacle >= SAFE_DISTANCE))",
+            "ftInfAUExpanded": "(G (distance_to_obstacle >= 2))",
             "component": "EV_collision_avoidance_system"
         },
         "status": "in progress",
-        "_id": "0dc617b2-d692-11ef-b388-fde3cac4a3e9"
+        "_id": "1fb8b192-d97a-11ef-b40c-8d159b9c3e60"
     },
     {
         "reqid": "REQ-03.01",
@@ -268,7 +267,7 @@
             "component": "EV_navigation_system"
         },
         "status": "in progress",
-        "_id": "0dc617b3-d692-11ef-b388-fde3cac4a3e9"
+        "_id": "1fb8b193-d97a-11ef-b40c-8d159b9c3e60"
     },
     {
         "reqid": "REQ-01.04",
@@ -339,7 +338,7 @@
             "component": "EV_energy_management_system"
         },
         "status": "in progress",
-        "_id": "0dc617b4-d692-11ef-b388-fde3cac4a3e9"
+        "_id": "1fb8b194-d97a-11ef-b40c-8d159b9c3e60"
     },
     {
         "reqid": "REQ-01.02",
@@ -347,7 +346,7 @@
         "project": "Autonomous EV Sim",
         "rationale": "Prevents overcharging and potential battery damage.",
         "comments": "Included with safety checks for sudden battery level anomalies.",
-        "fulltext": "The  EV_charging_system  shall always satisfy  battery_level <= 100/100 ",
+        "fulltext": "The  EV_energy_management_system  shall always satisfy  battery_level <= 100/100 ",
         "semantics": {
             "type": "nasa",
             "scope": {
@@ -359,19 +358,19 @@
             "variables": [
                 "battery_level"
             ],
-            "component_name": "EV_charging_system",
+            "component_name": "EV_energy_management_system",
             "componentTextRange": [
                 0,
-                22
+                31
             ],
             "timingTextRange": [
-                31,
-                36
+                40,
+                45
             ],
             "post_condition": "(battery_level <= 100 / 100)",
             "responseTextRange": [
-                38,
-                70
+                47,
+                79
             ],
             "diagramVariables": "Response = <b><i>(battery_level <= 100 / 100)</i></b>.",
             "description": "ENFORCED: in the interval defined by the entire execution.\nTRIGGER: first point in the interval.\nREQUIRES: for every trigger, RES must hold at all time points between (and including) the trigger and the end of the interval.",
@@ -394,10 +393,10 @@
             "ftExpanded": "(LAST V (battery_level <= (100 / 100)))",
             "ftInfAUExpanded_fetched": "(G $post_condition_SMV_ft$)",
             "ftInfAUExpanded": "(G (battery_level <= (100 / 100)))",
-            "component": "EV_charging_system"
+            "component": "EV_energy_management_system"
         },
         "status": "in progress",
-        "_id": "0dc617b5-d692-11ef-b388-fde3cac4a3e9"
+        "_id": "1fb8b195-d97a-11ef-b40c-8d159b9c3e60"
     },
     {
         "reqid": "REQ-02.02",
@@ -455,7 +454,7 @@
             "component": "EV_diagnostics_system"
         },
         "status": "in progress",
-        "_id": "0dc617b6-d692-11ef-b388-fde3cac4a3e9"
+        "_id": "1fb8b196-d97a-11ef-b40c-8d159b9c3e60"
     },
     {
         "reqid": "REQ-05.03",
@@ -528,7 +527,7 @@
             "component": "EV_navigation_system"
         },
         "status": "in progress",
-        "_id": "0dc617b7-d692-11ef-b388-fde3cac4a3e9"
+        "_id": "1fb8b197-d97a-11ef-b40c-8d159b9c3e60"
     },
     {
         "reqid": "REQ-04.01",
@@ -586,7 +585,7 @@
             "component": "EV_collision_avoidance_system"
         },
         "status": "in progress",
-        "_id": "0dc617b8-d692-11ef-b388-fde3cac4a3e9"
+        "_id": "1fb8b198-d97a-11ef-b40c-8d159b9c3e60"
     },
     {
         "reqid": "REQ-02",
@@ -644,7 +643,7 @@
             "component": "EV_diagnostics_system"
         },
         "status": "in progress",
-        "_id": "0dc617b9-d692-11ef-b388-fde3cac4a3e9"
+        "_id": "1fb8b199-d97a-11ef-b40c-8d159b9c3e60"
     },
     {
         "reqid": "REQ-03.02",
@@ -705,7 +704,7 @@
             "component": "EV_navigation_system"
         },
         "status": "in progress",
-        "_id": "0dc617ba-d692-11ef-b388-fde3cac4a3e9"
+        "_id": "1fb8b19a-d97a-11ef-b40c-8d159b9c3e60"
     },
     {
         "reqid": "REQ-01.01",
@@ -767,7 +766,7 @@
             "component": "EV_energy_management_system"
         },
         "status": "in progress",
-        "_id": "0dc617bb-d692-11ef-b388-fde3cac4a3e9"
+        "_id": "1fb8b19b-d97a-11ef-b40c-8d159b9c3e60"
     },
     {
         "reqid": "REQ-05",
@@ -775,7 +774,7 @@
         "project": "Autonomous EV Sim",
         "rationale": "Ensures the EV adheres to traffic rules and operates safely within legal boundaries.",
         "comments": "This encompasses stopping at traffic lights, yielding to pedestrians, and adapting to road signs.",
-        "fulltext": " EV_navigation_system  shall always satisfy if ( traffiic_rules = ACTIVE  &  road_conditions = NORMAL ) then  traffic_compliance = ON ",
+        "fulltext": " EV_navigation_system  shall always satisfy if ( traffic_rules = ACTIVE  &  road_conditions = NORMAL ) then  traffic_compliance = ON ",
         "semantics": {
             "type": "nasa",
             "scope": {
@@ -785,7 +784,7 @@
             "timing": "always",
             "response": "satisfaction",
             "variables": [
-                "traffiic_rules",
+                "traffic_rules",
                 "ACTIVE",
                 "road_conditions",
                 "NORMAL",
@@ -801,36 +800,36 @@
                 28,
                 33
             ],
-            "post_condition": "(( traffiic_rules = ACTIVE & road_conditions = NORMAL ) => traffic_compliance = ON)",
+            "post_condition": "(( traffic_rules = ACTIVE & road_conditions = NORMAL ) => traffic_compliance = ON)",
             "responseTextRange": [
                 35,
-                131
+                130
             ],
-            "diagramVariables": "Response = <b><i>(( traffiic_rules = ACTIVE & road_conditions = NORMAL ) => traffic_compliance = ON)</i></b>.",
+            "diagramVariables": "Response = <b><i>(( traffic_rules = ACTIVE & road_conditions = NORMAL ) => traffic_compliance = ON)</i></b>.",
             "description": "ENFORCED: in the interval defined by the entire execution.\nTRIGGER: first point in the interval.\nREQUIRES: for every trigger, RES must hold at all time points between (and including) the trigger and the end of the interval.",
             "diagram": "_media/user-interface/examples/svgDiagrams/null_null_always_satisfaction.svg",
             "scope_mode_pt": "BAD_PT",
             "scope_mode_ft": "BAD_FT",
-            "post_condition_unexp_pt": "(((traffiic_rules = ACTIVE) & (road_conditions = NORMAL)) -> (traffic_compliance = ON))",
-            "post_condition_unexp_ft": "(((traffiic_rules = ACTIVE) & (road_conditions = NORMAL)) -> (traffic_compliance = ON))",
-            "post_condition_SMV_pt": "(((traffiic_rules = ACTIVE) & (road_conditions = NORMAL)) -> (traffic_compliance = ON))",
-            "post_condition_SMV_ft": "(((traffiic_rules = ACTIVE) & (road_conditions = NORMAL)) -> (traffic_compliance = ON))",
+            "post_condition_unexp_pt": "(((traffic_rules = ACTIVE) & (road_conditions = NORMAL)) -> (traffic_compliance = ON))",
+            "post_condition_unexp_ft": "(((traffic_rules = ACTIVE) & (road_conditions = NORMAL)) -> (traffic_compliance = ON))",
+            "post_condition_SMV_pt": "(((traffic_rules = ACTIVE) & (road_conditions = NORMAL)) -> (traffic_compliance = ON))",
+            "post_condition_SMV_ft": "(((traffic_rules = ACTIVE) & (road_conditions = NORMAL)) -> (traffic_compliance = ON))",
             "ft_fetched": "(LAST V $post_condition_unexp_ft$)",
-            "ft": "(LAST V (((traffiic_rules = ACTIVE) & (road_conditions = NORMAL)) -> (traffic_compliance = ON)))",
+            "ft": "(LAST V (((traffic_rules = ACTIVE) & (road_conditions = NORMAL)) -> (traffic_compliance = ON)))",
             "pt_fetched": "(H $post_condition_unexp_pt$)",
-            "pt": "(H (((traffiic_rules = ACTIVE) & (road_conditions = NORMAL)) -> (traffic_compliance = ON)))",
+            "pt": "(H (((traffic_rules = ACTIVE) & (road_conditions = NORMAL)) -> (traffic_compliance = ON)))",
             "ptExpanded_fetched": "(H $post_condition_SMV_pt$)",
-            "ptExpanded": "(H (((traffiic_rules = ACTIVE) & (road_conditions = NORMAL)) -> (traffic_compliance = ON)))",
-            "CoCoSpecCode": "H((((traffiic_rules = ACTIVE) and (road_conditions = NORMAL)) => (traffic_compliance = ON)))",
+            "ptExpanded": "(H (((traffic_rules = ACTIVE) & (road_conditions = NORMAL)) -> (traffic_compliance = ON)))",
+            "CoCoSpecCode": "H((((traffic_rules = ACTIVE) and (road_conditions = NORMAL)) => (traffic_compliance = ON)))",
             "ftExpanded_fetched": "(LAST V $post_condition_SMV_ft$)",
-            "ftExpandedUnoptimized": "(LAST V (((traffiic_rules = ACTIVE) & (road_conditions = NORMAL)) -> (traffic_compliance = ON)))",
-            "ftExpanded": "(LAST V (((traffiic_rules = ACTIVE) & (road_conditions = NORMAL)) -> (traffic_compliance = ON)))",
+            "ftExpandedUnoptimized": "(LAST V (((traffic_rules = ACTIVE) & (road_conditions = NORMAL)) -> (traffic_compliance = ON)))",
+            "ftExpanded": "(LAST V (((traffic_rules = ACTIVE) & (road_conditions = NORMAL)) -> (traffic_compliance = ON)))",
             "ftInfAUExpanded_fetched": "(G $post_condition_SMV_ft$)",
-            "ftInfAUExpanded": "(G (((traffiic_rules = ACTIVE) & (road_conditions = NORMAL)) -> (traffic_compliance = ON)))",
+            "ftInfAUExpanded": "(G (((traffic_rules = ACTIVE) & (road_conditions = NORMAL)) -> (traffic_compliance = ON)))",
             "component": "EV_navigation_system"
         },
         "status": "in progress",
-        "_id": "0dc617bc-d692-11ef-b388-fde3cac4a3e9"
+        "_id": "1fb8b19c-d97a-11ef-b40c-8d159b9c3e60"
     },
     {
         "reqid": "REQ-05.01",
@@ -892,7 +891,7 @@
             "component": "EV_navigation_system"
         },
         "status": "in progress",
-        "_id": "0dc617bd-d692-11ef-b388-fde3cac4a3e9"
+        "_id": "1fb8b19d-d97a-11ef-b40c-8d159b9c3e60"
     },
     {
         "reqid": "REQ-05.04",
@@ -953,7 +952,7 @@
             "component": "EV_navigation_system"
         },
         "status": "in progress",
-        "_id": "0dc617be-d692-11ef-b388-fde3cac4a3e9"
+        "_id": "1fb8b19e-d97a-11ef-b40c-8d159b9c3e60"
     },
     {
         "reqid": "REQ-03",
@@ -1027,7 +1026,7 @@
             "component": "EV_navigation_system"
         },
         "status": "in progress",
-        "_id": "0dc617bf-d692-11ef-b388-fde3cac4a3e9"
+        "_id": "1fb8b19f-d97a-11ef-b40c-8d159b9c3e60"
     },
     {
         "reqid": "REQ-01.03",
@@ -1100,7 +1099,7 @@
             "component": "EV_energy_management_system"
         },
         "status": "in progress",
-        "_id": "0dc617c0-d692-11ef-b388-fde3cac4a3e9"
+        "_id": "1fb8b1a0-d97a-11ef-b40c-8d159b9c3e60"
     },
     {
         "reqid": "REQ-01",
@@ -1171,6 +1170,6 @@
             "component": "EV_energy_management_system"
         },
         "status": "in progress",
-        "_id": "0dc617c1-d692-11ef-b388-fde3cac4a3e9"
+        "_id": "1fb8b1a1-d97a-11ef-b40c-8d159b9c3e60"
     }
 ]
