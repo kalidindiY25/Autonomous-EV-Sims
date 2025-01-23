@@ -1322,16 +1322,17 @@
             "reqs": [
                 "ee5f22c0-d427-11ef-867f-7339dad409a4"
             ],
-            "dataType": "",
-            "idType": "",
-            "description": "",
+            "dataType": "boolean",
+            "idType": "Mode",
+            "moduleName": "",
+            "description": "Discharging battery power to grid",
             "assignment": "",
             "copilotAssignment": "",
-            "modeRequirement": "",
+            "modeRequirement": "if grid_demand_peak = LOW then EV_discharge_mode = ON",
             "modeldoc": false,
-            "modelComponent": "",
             "modeldoc_id": "",
-            "completed": false,
+            "modelComponent": "",
+            "completed": true,
             "_id": "Autonomous EV SimEV_energy_management_systemEV_discharge_mode"
         },
         {
@@ -1341,16 +1342,17 @@
             "reqs": [
                 "8ab68d40-d426-11ef-867f-7339dad409a4"
             ],
-            "dataType": "",
-            "idType": "",
-            "description": "",
+            "dataType": "boolean",
+            "idType": "Mode",
+            "moduleName": "",
+            "description": "Current EV operational state",
             "assignment": "",
             "copilotAssignment": "",
-            "modeRequirement": "",
+            "modeRequirement": "if battery_level < 20 then EV_state = LOW_POWER",
             "modeldoc": false,
-            "modelComponent": "",
             "modeldoc_id": "",
-            "completed": false,
+            "modelComponent": "",
+            "completed": true,
             "_id": "Autonomous EV SimEV_energy_management_systemEV_state"
         },
         {
@@ -1362,16 +1364,17 @@
                 "ee5f22c0-d427-11ef-867f-7339dad409a4",
                 "fae4c5b0-d425-11ef-867f-7339dad409a4"
             ],
-            "dataType": "",
-            "idType": "",
-            "description": "",
-            "assignment": "",
+            "dataType": "boolean",
+            "idType": "Internal",
+            "moduleName": "",
+            "description": "Binary ON state",
+            "assignment": "1",
             "copilotAssignment": "",
             "modeRequirement": "",
             "modeldoc": false,
-            "modelComponent": "",
             "modeldoc_id": "",
-            "completed": false,
+            "modelComponent": "",
+            "completed": true,
             "_id": "Autonomous EV SimEV_energy_management_systemON"
         },
         {
@@ -1381,16 +1384,17 @@
             "reqs": [
                 "ee5f22c0-d427-11ef-867f-7339dad409a4"
             ],
-            "dataType": "",
-            "idType": "",
-            "description": "",
-            "assignment": "",
+            "dataType": "boolean",
+            "idType": "Internal",
+            "moduleName": "",
+            "description": "Binary YES state",
+            "assignment": "grid_demand_peak",
             "copilotAssignment": "",
             "modeRequirement": "",
             "modeldoc": false,
-            "modelComponent": "",
             "modeldoc_id": "",
-            "completed": false,
+            "modelComponent": "",
+            "completed": true,
             "_id": "Autonomous EV SimEV_energy_management_systemYES"
         },
         {
@@ -1401,16 +1405,17 @@
                 "8ab68d40-d426-11ef-867f-7339dad409a4",
                 "25e8c6c0-d427-11ef-867f-7339dad409a4"
             ],
-            "dataType": "",
-            "idType": "",
-            "description": "",
+            "dataType": "integer",
+            "idType": "Input",
+            "moduleName": "",
+            "description": "Current battery level",
             "assignment": "",
             "copilotAssignment": "",
             "modeRequirement": "",
             "modeldoc": false,
-            "modelComponent": "",
             "modeldoc_id": "",
-            "completed": false,
+            "modelComponent": "",
+            "completed": true,
             "_id": "Autonomous EV SimEV_energy_management_systembattery_level"
         },
         {
@@ -1420,16 +1425,17 @@
             "reqs": [
                 "fae4c5b0-d425-11ef-867f-7339dad409a4"
             ],
-            "dataType": "",
-            "idType": "",
-            "description": "",
+            "dataType": "boolean",
+            "idType": "Mode",
+            "moduleName": "",
+            "description": "Mode for optimising energy usage",
             "assignment": "",
             "copilotAssignment": "",
-            "modeRequirement": "",
+            "modeRequirement": "if energy_efficiency_mode = ON then optimal_battery_usage = ON",
             "modeldoc": false,
-            "modelComponent": "",
             "modeldoc_id": "",
-            "completed": false,
+            "modelComponent": "",
+            "completed": true,
             "_id": "Autonomous EV SimEV_energy_management_systemenergy_efficiency_mode"
         },
         {
@@ -1440,15 +1446,16 @@
                 "ee5f22c0-d427-11ef-867f-7339dad409a4"
             ],
             "dataType": "",
-            "idType": "",
-            "description": "",
+            "idType": "Function",
+            "moduleName": "GridMonitor",
+            "description": "Peak grid demand detection",
             "assignment": "",
             "copilotAssignment": "",
             "modeRequirement": "",
             "modeldoc": false,
-            "modelComponent": "",
             "modeldoc_id": "",
-            "completed": false,
+            "modelComponent": "",
+            "completed": true,
             "_id": "Autonomous EV SimEV_energy_management_systemgrid_demand_peak"
         },
         {
@@ -1458,16 +1465,17 @@
             "reqs": [
                 "1e3c4d60-d42d-11ef-867f-7339dad409a4"
             ],
-            "dataType": "",
-            "idType": "",
-            "description": "",
+            "dataType": "double",
+            "idType": "Input",
+            "moduleName": "",
+            "description": "Current energy grid load",
             "assignment": "",
             "copilotAssignment": "",
             "modeRequirement": "",
             "modeldoc": false,
-            "modelComponent": "",
             "modeldoc_id": "",
-            "completed": false,
+            "modelComponent": "",
+            "completed": true,
             "_id": "Autonomous EV SimEV_energy_management_systemgrid_load"
         },
         {
@@ -1477,16 +1485,17 @@
             "reqs": [
                 "1e3c4d60-d42d-11ef-867f-7339dad409a4"
             ],
-            "dataType": "",
-            "idType": "",
-            "description": "",
-            "assignment": "",
+            "dataType": "boolean",
+            "idType": "Internal",
+            "moduleName": "",
+            "description": "Low grid load indication",
+            "assignment": "grid_load",
             "copilotAssignment": "",
             "modeRequirement": "",
             "modeldoc": false,
-            "modelComponent": "",
             "modeldoc_id": "",
-            "completed": false,
+            "modelComponent": "",
+            "completed": true,
             "_id": "Autonomous EV SimEV_energy_management_systemlow"
         },
         {
@@ -1496,16 +1505,17 @@
             "reqs": [
                 "8ab68d40-d426-11ef-867f-7339dad409a4"
             ],
-            "dataType": "",
-            "idType": "",
-            "description": "",
+            "dataType": "boolean",
+            "idType": "Output",
+            "moduleName": "",
+            "description": "Activates low power mode",
             "assignment": "",
             "copilotAssignment": "",
             "modeRequirement": "",
             "modeldoc": false,
-            "modelComponent": "",
             "modeldoc_id": "",
-            "completed": false,
+            "modelComponent": "",
+            "completed": true,
             "_id": "Autonomous EV SimEV_energy_management_systemlow_power_mode"
         },
         {
@@ -1515,16 +1525,17 @@
             "reqs": [
                 "8ab68d40-d426-11ef-867f-7339dad409a4"
             ],
-            "dataType": "",
-            "idType": "",
-            "description": "",
-            "assignment": "",
+            "dataType": "boolean",
+            "idType": "Internal",
+            "moduleName": "",
+            "description": "Moving state of the vehicle",
+            "assignment": "EV_state",
             "copilotAssignment": "",
             "modeRequirement": "",
             "modeldoc": false,
-            "modelComponent": "",
             "modeldoc_id": "",
-            "completed": false,
+            "modelComponent": "",
+            "completed": true,
             "_id": "Autonomous EV SimEV_energy_management_systemmoving"
         },
         {
@@ -1534,16 +1545,17 @@
             "reqs": [
                 "fae4c5b0-d425-11ef-867f-7339dad409a4"
             ],
-            "dataType": "",
-            "idType": "",
-            "description": "",
+            "dataType": "boolean",
+            "idType": "Output",
+            "moduleName": "",
+            "description": "Ensures optimal battery",
             "assignment": "",
             "copilotAssignment": "",
             "modeRequirement": "",
             "modeldoc": false,
-            "modelComponent": "",
             "modeldoc_id": "",
-            "completed": false,
+            "modelComponent": "",
+            "completed": true,
             "_id": "Autonomous EV SimEV_energy_management_systemoptimal_battery_usage"
         },
         {
@@ -1553,16 +1565,17 @@
             "reqs": [
                 "1e3c4d60-d42d-11ef-867f-7339dad409a4"
             ],
-            "dataType": "",
-            "idType": "",
-            "description": "",
+            "dataType": "boolean",
+            "idType": "Input",
+            "moduleName": "",
+            "description": "Charging request received or not",
             "assignment": "",
             "copilotAssignment": "",
             "modeRequirement": "",
             "modeldoc": false,
-            "modelComponent": "",
             "modeldoc_id": "",
-            "completed": false,
+            "modelComponent": "",
+            "completed": true,
             "_id": "Autonomous EV SimEV_energy_management_systemreceipt_of_charging_request_command"
         },
         {
