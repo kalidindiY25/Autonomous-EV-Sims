@@ -68,7 +68,7 @@
                 "ftInfAUExpanded": "((G (((! pedestrian_detected) & (X pedestrian_detected)) -> (X stopping_action))) & (pedestrian_detected -> stopping_action))",
                 "component": "EV_navigation_system"
             },
-            "_id": "05551a00-d691-11ef-867f-7339dad409a4"
+            "_id": "50657de0-d9a3-11ef-9c7b-47236fd1e2ce"
         },
         {
             "reqid": "REQ-02.01",
@@ -139,7 +139,7 @@
                 "ftInfAUExpanded": "((G (((! (sensor_malfunction = ON)) & (X (sensor_malfunction = ON))) -> (X (failure_flag = ON)))) & ((sensor_malfunction = ON) -> (failure_flag = ON)))",
                 "component": "EV_diagnostics_system"
             },
-            "_id": "080dd590-d68a-11ef-867f-7339dad409a4"
+            "_id": "50657de1-d9a3-11ef-9c7b-47236fd1e2ce"
         },
         {
             "reqid": "REQ-04",
@@ -197,7 +197,7 @@
                 "ftInfAUExpanded": "(G (distance_to_obstacle >= 2))",
                 "component": "EV_collision_avoidance_system"
             },
-            "_id": "107cec90-d68d-11ef-867f-7339dad409a4"
+            "_id": "50657de2-d9a3-11ef-9c7b-47236fd1e2ce"
         },
         {
             "reqid": "REQ-03.01",
@@ -268,7 +268,7 @@
                 "ftInfAUExpanded": "((G (((! (traffic_jam_detected = ON)) & (X (traffic_jam_detected = ON))) -> (X optimal_route_update))) & ((traffic_jam_detected = ON) -> optimal_route_update))",
                 "component": "EV_navigation_system"
             },
-            "_id": "17b29600-d68c-11ef-867f-7339dad409a4"
+            "_id": "50657de3-d9a3-11ef-9c7b-47236fd1e2ce"
         },
         {
             "reqid": "REQ-01.04",
@@ -339,7 +339,7 @@
                 "ftInfAUExpanded": "((G (((! (receipt_of_charging_request_command & (grid_load = low))) & (X (receipt_of_charging_request_command & (grid_load = low)))) -> (X (G (grid_load = low))))) & ((receipt_of_charging_request_command & (grid_load = low)) -> (G (grid_load = low))))",
                 "component": "EV_energy_management_system"
             },
-            "_id": "1e3c4d60-d42d-11ef-867f-7339dad409a4"
+            "_id": "50657de4-d9a3-11ef-9c7b-47236fd1e2ce"
         },
         {
             "reqid": "REQ-01.02",
@@ -397,7 +397,7 @@
                 "ftInfAUExpanded": "(G (battery_level <= (100 / 100)))",
                 "component": "EV_energy_management_system"
             },
-            "_id": "25e8c6c0-d427-11ef-867f-7339dad409a4"
+            "_id": "50657de5-d9a3-11ef-9c7b-47236fd1e2ce"
         },
         {
             "reqid": "REQ-02.02",
@@ -455,7 +455,7 @@
                 "ftInfAUExpanded": "(G failure_log_format)",
                 "component": "EV_diagnostics_system"
             },
-            "_id": "438dc490-d68a-11ef-867f-7339dad409a4"
+            "_id": "50657de6-d9a3-11ef-9c7b-47236fd1e2ce"
         },
         {
             "reqid": "REQ-05.03",
@@ -528,7 +528,7 @@
                 "ftInfAUExpanded": "((G (((! ((traffic_light_state = YELLOW) & (distance_to_light < 20))) & (X ((traffic_light_state = YELLOW) & (distance_to_light < 20)))) -> (X (X (stopping_action = ON))))) & (((traffic_light_state = YELLOW) & (distance_to_light < 20)) -> (X (stopping_action = ON))))",
                 "component": "EV_navigation_system"
             },
-            "_id": "514b0e10-d691-11ef-867f-7339dad409a4"
+            "_id": "50657de7-d9a3-11ef-9c7b-47236fd1e2ce"
         },
         {
             "reqid": "REQ-04.01",
@@ -586,7 +586,7 @@
                 "ftInfAUExpanded": "(G (distance_to_vehicle_ahead >= 10))",
                 "component": "EV_collision_avoidance_system"
             },
-            "_id": "6eb4f320-d68d-11ef-867f-7339dad409a4"
+            "_id": "50657de8-d9a3-11ef-9c7b-47236fd1e2ce"
         },
         {
             "reqid": "REQ-02",
@@ -644,7 +644,7 @@
                 "ftInfAUExpanded": "(G standard_diagnostic_reporting_format)",
                 "component": "EV_diagnostics_system"
             },
-            "_id": "7af05890-d689-11ef-867f-7339dad409a4"
+            "_id": "50657de9-d9a3-11ef-9c7b-47236fd1e2ce"
         },
         {
             "reqid": "REQ-03.02",
@@ -705,7 +705,7 @@
                 "ftInfAUExpanded": "(G (preBool(FALSE,((battery_level < (20 / 100)) & (! charging_station_nearby))) -> (continue_search_for_station = ON)))",
                 "component": "EV_navigation_system"
             },
-            "_id": "7f433090-d68c-11ef-867f-7339dad409a4"
+            "_id": "50657dea-d9a3-11ef-9c7b-47236fd1e2ce"
         },
         {
             "reqid": "REQ-01.01",
@@ -767,7 +767,7 @@
                 "ftInfAUExpanded": "(G (((EV_state = moving) & (battery_level < 20)) -> (low_power_mode = ON)))",
                 "component": "EV_energy_management_system"
             },
-            "_id": "8ab68d40-d426-11ef-867f-7339dad409a4"
+            "_id": "50657deb-d9a3-11ef-9c7b-47236fd1e2ce"
         },
         {
             "reqid": "REQ-05",
@@ -830,7 +830,7 @@
                 "ftInfAUExpanded": "(G (((traffic_rules = ACTIVE) & (road_conditions = NORMAL)) -> (traffic_compliance = ON)))",
                 "component": "EV_navigation_system"
             },
-            "_id": "9cebbd90-d68e-11ef-867f-7339dad409a4"
+            "_id": "50657dec-d9a3-11ef-9c7b-47236fd1e2ce"
         },
         {
             "reqid": "REQ-05.01",
@@ -892,7 +892,7 @@
                 "ftInfAUExpanded": "(G (((traffic_light_state = RED) & (distance_to_light < 50)) -> (stopping_action = ON)))",
                 "component": "EV_navigation_system"
             },
-            "_id": "b028bff0-d690-11ef-867f-7339dad409a4"
+            "_id": "50657ded-d9a3-11ef-9c7b-47236fd1e2ce"
         },
         {
             "reqid": "REQ-05.04",
@@ -953,7 +953,7 @@
                 "ftInfAUExpanded": "(G (((emergency_vehicle_detected = ON) & (distance_to_emergency_vehicle < 20)) -> (stopping_action = ON)))",
                 "component": "EV_navigation_system"
             },
-            "_id": "d10ae990-d691-11ef-867f-7339dad409a4"
+            "_id": "50657dee-d9a3-11ef-9c7b-47236fd1e2ce"
         },
         {
             "reqid": "REQ-03",
@@ -1027,7 +1027,7 @@
                 "ftInfAUExpanded": "((G (((! ((traffic_conditions = CONGESTED) & (EV_routing_request = ON))) & (X ((traffic_conditions = CONGESTED) & (EV_routing_request = ON)))) -> (X (X (updated_route = OPTIMAL))))) & (((traffic_conditions = CONGESTED) & (EV_routing_request = ON)) -> (X (updated_route = OPTIMAL))))",
                 "component": "EV_navigation_system"
             },
-            "_id": "e7ae3780-d68a-11ef-867f-7339dad409a4"
+            "_id": "50657def-d9a3-11ef-9c7b-47236fd1e2ce"
         },
         {
             "reqid": "REQ-01.03",
@@ -1100,7 +1100,7 @@
                 "ftInfAUExpanded": "((G (((! (grid_demand_peak = YES)) & (X (grid_demand_peak = YES))) -> (X (F[0,5] (EV_discharge_mode = ON))))) & ((grid_demand_peak = YES) -> (F[0,5] (EV_discharge_mode = ON))))",
                 "component": "EV_energy_management_system"
             },
-            "_id": "ee5f22c0-d427-11ef-867f-7339dad409a4"
+            "_id": "50657df0-d9a3-11ef-9c7b-47236fd1e2ce"
         },
         {
             "reqid": "REQ-01",
@@ -1171,7 +1171,7 @@
                 "ftInfAUExpanded": "((G (((! (energy_efficiency_mode = ON)) & (X (energy_efficiency_mode = ON))) -> (X (optimal_battery_usage = ON)))) & ((energy_efficiency_mode = ON) -> (optimal_battery_usage = ON)))",
                 "component": "EV_energy_management_system"
             },
-            "_id": "fae4c5b0-d425-11ef-867f-7339dad409a4"
+            "_id": "50657df1-d9a3-11ef-9c7b-47236fd1e2ce"
         }
     ],
     "variables": [
@@ -1180,7 +1180,7 @@
             "component_name": "EV_collision_avoidance_system",
             "variable_name": "distance_to_obstacle",
             "reqs": [
-                "107cec90-d68d-11ef-867f-7339dad409a4"
+                "50657de2-d9a3-11ef-9c7b-47236fd1e2ce"
             ],
             "dataType": "double",
             "idType": "Input",
@@ -1190,8 +1190,8 @@
             "copilotAssignment": "",
             "modeRequirement": "",
             "modeldoc": false,
-            "modeldoc_id": "",
             "modelComponent": "",
+            "modeldoc_id": "",
             "completed": true,
             "_id": "ELEVATEEV_collision_avoidance_systemdistance_to_obstacle"
         },
@@ -1200,7 +1200,7 @@
             "component_name": "EV_collision_avoidance_system",
             "variable_name": "distance_to_vehicle_ahead",
             "reqs": [
-                "6eb4f320-d68d-11ef-867f-7339dad409a4"
+                "50657de8-d9a3-11ef-9c7b-47236fd1e2ce"
             ],
             "dataType": "double",
             "idType": "Input",
@@ -1210,8 +1210,8 @@
             "copilotAssignment": "",
             "modeRequirement": "",
             "modeldoc": false,
-            "modeldoc_id": "",
             "modelComponent": "",
+            "modeldoc_id": "",
             "completed": true,
             "_id": "ELEVATEEV_collision_avoidance_systemdistance_to_vehicle_ahead"
         },
@@ -1220,7 +1220,7 @@
             "component_name": "EV_diagnostics_system",
             "variable_name": "ON",
             "reqs": [
-                "080dd590-d68a-11ef-867f-7339dad409a4"
+                "50657de1-d9a3-11ef-9c7b-47236fd1e2ce"
             ],
             "dataType": "boolean",
             "idType": "Internal",
@@ -1230,8 +1230,8 @@
             "copilotAssignment": "",
             "modeRequirement": "",
             "modeldoc": false,
-            "modeldoc_id": "",
             "modelComponent": "",
+            "modeldoc_id": "",
             "completed": true,
             "_id": "ELEVATEEV_diagnostics_systemON"
         },
@@ -1240,7 +1240,7 @@
             "component_name": "EV_diagnostics_system",
             "variable_name": "failure_flag",
             "reqs": [
-                "080dd590-d68a-11ef-867f-7339dad409a4"
+                "50657de1-d9a3-11ef-9c7b-47236fd1e2ce"
             ],
             "dataType": "boolean",
             "idType": "Output",
@@ -1250,8 +1250,8 @@
             "copilotAssignment": "",
             "modeRequirement": "",
             "modeldoc": false,
-            "modeldoc_id": "",
             "modelComponent": "",
+            "modeldoc_id": "",
             "completed": true,
             "_id": "ELEVATEEV_diagnostics_systemfailure_flag"
         },
@@ -1260,7 +1260,7 @@
             "component_name": "EV_diagnostics_system",
             "variable_name": "failure_log_format",
             "reqs": [
-                "438dc490-d68a-11ef-867f-7339dad409a4"
+                "50657de6-d9a3-11ef-9c7b-47236fd1e2ce"
             ],
             "dataType": "unsigned integer",
             "idType": "Internal",
@@ -1270,8 +1270,8 @@
             "copilotAssignment": "",
             "modeRequirement": "",
             "modeldoc": false,
-            "modeldoc_id": "",
             "modelComponent": "",
+            "modeldoc_id": "",
             "completed": true,
             "_id": "ELEVATEEV_diagnostics_systemfailure_log_format"
         },
@@ -1280,7 +1280,7 @@
             "component_name": "EV_diagnostics_system",
             "variable_name": "sensor_malfunction",
             "reqs": [
-                "080dd590-d68a-11ef-867f-7339dad409a4"
+                "50657de1-d9a3-11ef-9c7b-47236fd1e2ce"
             ],
             "dataType": "",
             "idType": "Function",
@@ -1290,8 +1290,8 @@
             "copilotAssignment": "",
             "modeRequirement": "",
             "modeldoc": false,
-            "modeldoc_id": "",
             "modelComponent": "",
+            "modeldoc_id": "",
             "completed": true,
             "_id": "ELEVATEEV_diagnostics_systemsensor_malfunction"
         },
@@ -1300,7 +1300,7 @@
             "component_name": "EV_diagnostics_system",
             "variable_name": "standard_diagnostic_reporting_format",
             "reqs": [
-                "7af05890-d689-11ef-867f-7339dad409a4"
+                "50657de9-d9a3-11ef-9c7b-47236fd1e2ce"
             ],
             "dataType": "unsigned integer",
             "idType": "Input",
@@ -1310,8 +1310,8 @@
             "copilotAssignment": "",
             "modeRequirement": "",
             "modeldoc": false,
-            "modeldoc_id": "",
             "modelComponent": "",
+            "modeldoc_id": "",
             "completed": true,
             "_id": "ELEVATEEV_diagnostics_systemstandard_diagnostic_reporting_format"
         },
@@ -1320,7 +1320,7 @@
             "component_name": "EV_energy_management_system",
             "variable_name": "EV_discharge_mode",
             "reqs": [
-                "ee5f22c0-d427-11ef-867f-7339dad409a4"
+                "50657df0-d9a3-11ef-9c7b-47236fd1e2ce"
             ],
             "dataType": "boolean",
             "idType": "Mode",
@@ -1330,8 +1330,8 @@
             "copilotAssignment": "",
             "modeRequirement": "if grid_demand_peak = LOW then EV_discharge_mode = ON",
             "modeldoc": false,
-            "modeldoc_id": "",
             "modelComponent": "",
+            "modeldoc_id": "",
             "completed": true,
             "_id": "ELEVATEEV_energy_management_systemEV_discharge_mode"
         },
@@ -1340,7 +1340,7 @@
             "component_name": "EV_energy_management_system",
             "variable_name": "EV_state",
             "reqs": [
-                "8ab68d40-d426-11ef-867f-7339dad409a4"
+                "50657deb-d9a3-11ef-9c7b-47236fd1e2ce"
             ],
             "dataType": "boolean",
             "idType": "Mode",
@@ -1350,8 +1350,8 @@
             "copilotAssignment": "",
             "modeRequirement": "if battery_level < 20 then EV_state = LOW_POWER",
             "modeldoc": false,
-            "modeldoc_id": "",
             "modelComponent": "",
+            "modeldoc_id": "",
             "completed": true,
             "_id": "ELEVATEEV_energy_management_systemEV_state"
         },
@@ -1360,9 +1360,9 @@
             "component_name": "EV_energy_management_system",
             "variable_name": "ON",
             "reqs": [
-                "8ab68d40-d426-11ef-867f-7339dad409a4",
-                "ee5f22c0-d427-11ef-867f-7339dad409a4",
-                "fae4c5b0-d425-11ef-867f-7339dad409a4"
+                "50657deb-d9a3-11ef-9c7b-47236fd1e2ce",
+                "50657df0-d9a3-11ef-9c7b-47236fd1e2ce",
+                "50657df1-d9a3-11ef-9c7b-47236fd1e2ce"
             ],
             "dataType": "boolean",
             "idType": "Internal",
@@ -1372,8 +1372,8 @@
             "copilotAssignment": "",
             "modeRequirement": "",
             "modeldoc": false,
-            "modeldoc_id": "",
             "modelComponent": "",
+            "modeldoc_id": "",
             "completed": true,
             "_id": "ELEVATEEV_energy_management_systemON"
         },
@@ -1382,7 +1382,7 @@
             "component_name": "EV_energy_management_system",
             "variable_name": "YES",
             "reqs": [
-                "ee5f22c0-d427-11ef-867f-7339dad409a4"
+                "50657df0-d9a3-11ef-9c7b-47236fd1e2ce"
             ],
             "dataType": "boolean",
             "idType": "Internal",
@@ -1392,8 +1392,8 @@
             "copilotAssignment": "",
             "modeRequirement": "",
             "modeldoc": false,
-            "modeldoc_id": "",
             "modelComponent": "",
+            "modeldoc_id": "",
             "completed": true,
             "_id": "ELEVATEEV_energy_management_systemYES"
         },
@@ -1402,8 +1402,8 @@
             "component_name": "EV_energy_management_system",
             "variable_name": "battery_level",
             "reqs": [
-                "8ab68d40-d426-11ef-867f-7339dad409a4",
-                "25e8c6c0-d427-11ef-867f-7339dad409a4"
+                "50657de5-d9a3-11ef-9c7b-47236fd1e2ce",
+                "50657deb-d9a3-11ef-9c7b-47236fd1e2ce"
             ],
             "dataType": "integer",
             "idType": "Input",
@@ -1413,8 +1413,8 @@
             "copilotAssignment": "",
             "modeRequirement": "",
             "modeldoc": false,
-            "modeldoc_id": "",
             "modelComponent": "",
+            "modeldoc_id": "",
             "completed": true,
             "_id": "ELEVATEEV_energy_management_systembattery_level"
         },
@@ -1423,7 +1423,7 @@
             "component_name": "EV_energy_management_system",
             "variable_name": "energy_efficiency_mode",
             "reqs": [
-                "fae4c5b0-d425-11ef-867f-7339dad409a4"
+                "50657df1-d9a3-11ef-9c7b-47236fd1e2ce"
             ],
             "dataType": "boolean",
             "idType": "Mode",
@@ -1433,8 +1433,8 @@
             "copilotAssignment": "",
             "modeRequirement": "if energy_efficiency_mode = ON then optimal_battery_usage = ON",
             "modeldoc": false,
-            "modeldoc_id": "",
             "modelComponent": "",
+            "modeldoc_id": "",
             "completed": true,
             "_id": "ELEVATEEV_energy_management_systemenergy_efficiency_mode"
         },
@@ -1443,7 +1443,7 @@
             "component_name": "EV_energy_management_system",
             "variable_name": "grid_demand_peak",
             "reqs": [
-                "ee5f22c0-d427-11ef-867f-7339dad409a4"
+                "50657df0-d9a3-11ef-9c7b-47236fd1e2ce"
             ],
             "dataType": "",
             "idType": "Function",
@@ -1453,8 +1453,8 @@
             "copilotAssignment": "",
             "modeRequirement": "",
             "modeldoc": false,
-            "modeldoc_id": "",
             "modelComponent": "",
+            "modeldoc_id": "",
             "completed": true,
             "_id": "ELEVATEEV_energy_management_systemgrid_demand_peak"
         },
@@ -1463,7 +1463,7 @@
             "component_name": "EV_energy_management_system",
             "variable_name": "grid_load",
             "reqs": [
-                "1e3c4d60-d42d-11ef-867f-7339dad409a4"
+                "50657de4-d9a3-11ef-9c7b-47236fd1e2ce"
             ],
             "dataType": "double",
             "idType": "Input",
@@ -1473,8 +1473,8 @@
             "copilotAssignment": "",
             "modeRequirement": "",
             "modeldoc": false,
-            "modeldoc_id": "",
             "modelComponent": "",
+            "modeldoc_id": "",
             "completed": true,
             "_id": "ELEVATEEV_energy_management_systemgrid_load"
         },
@@ -1483,7 +1483,7 @@
             "component_name": "EV_energy_management_system",
             "variable_name": "low",
             "reqs": [
-                "1e3c4d60-d42d-11ef-867f-7339dad409a4"
+                "50657de4-d9a3-11ef-9c7b-47236fd1e2ce"
             ],
             "dataType": "boolean",
             "idType": "Internal",
@@ -1493,8 +1493,8 @@
             "copilotAssignment": "",
             "modeRequirement": "",
             "modeldoc": false,
-            "modeldoc_id": "",
             "modelComponent": "",
+            "modeldoc_id": "",
             "completed": true,
             "_id": "ELEVATEEV_energy_management_systemlow"
         },
@@ -1503,7 +1503,7 @@
             "component_name": "EV_energy_management_system",
             "variable_name": "low_power_mode",
             "reqs": [
-                "8ab68d40-d426-11ef-867f-7339dad409a4"
+                "50657deb-d9a3-11ef-9c7b-47236fd1e2ce"
             ],
             "dataType": "boolean",
             "idType": "Output",
@@ -1513,8 +1513,8 @@
             "copilotAssignment": "",
             "modeRequirement": "",
             "modeldoc": false,
-            "modeldoc_id": "",
             "modelComponent": "",
+            "modeldoc_id": "",
             "completed": true,
             "_id": "ELEVATEEV_energy_management_systemlow_power_mode"
         },
@@ -1523,7 +1523,7 @@
             "component_name": "EV_energy_management_system",
             "variable_name": "moving",
             "reqs": [
-                "8ab68d40-d426-11ef-867f-7339dad409a4"
+                "50657deb-d9a3-11ef-9c7b-47236fd1e2ce"
             ],
             "dataType": "boolean",
             "idType": "Internal",
@@ -1533,8 +1533,8 @@
             "copilotAssignment": "",
             "modeRequirement": "",
             "modeldoc": false,
-            "modeldoc_id": "",
             "modelComponent": "",
+            "modeldoc_id": "",
             "completed": true,
             "_id": "ELEVATEEV_energy_management_systemmoving"
         },
@@ -1543,7 +1543,7 @@
             "component_name": "EV_energy_management_system",
             "variable_name": "optimal_battery_usage",
             "reqs": [
-                "fae4c5b0-d425-11ef-867f-7339dad409a4"
+                "50657df1-d9a3-11ef-9c7b-47236fd1e2ce"
             ],
             "dataType": "boolean",
             "idType": "Output",
@@ -1553,8 +1553,8 @@
             "copilotAssignment": "",
             "modeRequirement": "",
             "modeldoc": false,
-            "modeldoc_id": "",
             "modelComponent": "",
+            "modeldoc_id": "",
             "completed": true,
             "_id": "ELEVATEEV_energy_management_systemoptimal_battery_usage"
         },
@@ -1563,7 +1563,7 @@
             "component_name": "EV_energy_management_system",
             "variable_name": "receipt_of_charging_request_command",
             "reqs": [
-                "1e3c4d60-d42d-11ef-867f-7339dad409a4"
+                "50657de4-d9a3-11ef-9c7b-47236fd1e2ce"
             ],
             "dataType": "boolean",
             "idType": "Input",
@@ -1573,8 +1573,8 @@
             "copilotAssignment": "",
             "modeRequirement": "",
             "modeldoc": false,
-            "modeldoc_id": "",
             "modelComponent": "",
+            "modeldoc_id": "",
             "completed": true,
             "_id": "ELEVATEEV_energy_management_systemreceipt_of_charging_request_command"
         },
@@ -1583,7 +1583,7 @@
             "component_name": "EV_navigation_system",
             "variable_name": "ACTIVE",
             "reqs": [
-                "9cebbd90-d68e-11ef-867f-7339dad409a4"
+                "50657dec-d9a3-11ef-9c7b-47236fd1e2ce"
             ],
             "dataType": "boolean",
             "idType": "Internal",
@@ -1593,8 +1593,8 @@
             "copilotAssignment": "",
             "modeRequirement": "",
             "modeldoc": false,
-            "modeldoc_id": "",
             "modelComponent": "",
+            "modeldoc_id": "",
             "completed": true,
             "_id": "ELEVATEEV_navigation_systemACTIVE"
         },
@@ -1603,7 +1603,7 @@
             "component_name": "EV_navigation_system",
             "variable_name": "CONGESTED",
             "reqs": [
-                "e7ae3780-d68a-11ef-867f-7339dad409a4"
+                "50657def-d9a3-11ef-9c7b-47236fd1e2ce"
             ],
             "dataType": "boolean",
             "idType": "Internal",
@@ -1613,8 +1613,8 @@
             "copilotAssignment": "",
             "modeRequirement": "",
             "modeldoc": false,
-            "modeldoc_id": "",
             "modelComponent": "",
+            "modeldoc_id": "",
             "completed": true,
             "_id": "ELEVATEEV_navigation_systemCONGESTED"
         },
@@ -1623,7 +1623,7 @@
             "component_name": "EV_navigation_system",
             "variable_name": "EV_routing_request",
             "reqs": [
-                "e7ae3780-d68a-11ef-867f-7339dad409a4"
+                "50657def-d9a3-11ef-9c7b-47236fd1e2ce"
             ],
             "dataType": "boolean",
             "idType": "Input",
@@ -1633,8 +1633,8 @@
             "copilotAssignment": "",
             "modeRequirement": "",
             "modeldoc": false,
-            "modeldoc_id": "",
             "modelComponent": "",
+            "modeldoc_id": "",
             "completed": true,
             "_id": "ELEVATEEV_navigation_systemEV_routing_request"
         },
@@ -1643,7 +1643,7 @@
             "component_name": "EV_navigation_system",
             "variable_name": "NORMAL",
             "reqs": [
-                "9cebbd90-d68e-11ef-867f-7339dad409a4"
+                "50657dec-d9a3-11ef-9c7b-47236fd1e2ce"
             ],
             "dataType": "boolean",
             "idType": "Internal",
@@ -1653,8 +1653,8 @@
             "copilotAssignment": "",
             "modeRequirement": "",
             "modeldoc": false,
-            "modeldoc_id": "",
             "modelComponent": "",
+            "modeldoc_id": "",
             "completed": true,
             "_id": "ELEVATEEV_navigation_systemNORMAL"
         },
@@ -1663,13 +1663,13 @@
             "component_name": "EV_navigation_system",
             "variable_name": "ON",
             "reqs": [
-                "17b29600-d68c-11ef-867f-7339dad409a4",
-                "514b0e10-d691-11ef-867f-7339dad409a4",
-                "7f433090-d68c-11ef-867f-7339dad409a4",
-                "9cebbd90-d68e-11ef-867f-7339dad409a4",
-                "b028bff0-d690-11ef-867f-7339dad409a4",
-                "d10ae990-d691-11ef-867f-7339dad409a4",
-                "e7ae3780-d68a-11ef-867f-7339dad409a4"
+                "50657de3-d9a3-11ef-9c7b-47236fd1e2ce",
+                "50657de7-d9a3-11ef-9c7b-47236fd1e2ce",
+                "50657dea-d9a3-11ef-9c7b-47236fd1e2ce",
+                "50657dec-d9a3-11ef-9c7b-47236fd1e2ce",
+                "50657ded-d9a3-11ef-9c7b-47236fd1e2ce",
+                "50657dee-d9a3-11ef-9c7b-47236fd1e2ce",
+                "50657def-d9a3-11ef-9c7b-47236fd1e2ce"
             ],
             "dataType": "boolean",
             "idType": "Internal",
@@ -1679,8 +1679,8 @@
             "copilotAssignment": "",
             "modeRequirement": "",
             "modeldoc": false,
-            "modeldoc_id": "",
             "modelComponent": "",
+            "modeldoc_id": "",
             "completed": true,
             "_id": "ELEVATEEV_navigation_systemON"
         },
@@ -1689,7 +1689,7 @@
             "component_name": "EV_navigation_system",
             "variable_name": "OPTIMAL",
             "reqs": [
-                "e7ae3780-d68a-11ef-867f-7339dad409a4"
+                "50657def-d9a3-11ef-9c7b-47236fd1e2ce"
             ],
             "dataType": "boolean",
             "idType": "Internal",
@@ -1699,8 +1699,8 @@
             "copilotAssignment": "",
             "modeRequirement": "",
             "modeldoc": false,
-            "modeldoc_id": "",
             "modelComponent": "",
+            "modeldoc_id": "",
             "completed": true,
             "_id": "ELEVATEEV_navigation_systemOPTIMAL"
         },
@@ -1709,7 +1709,7 @@
             "component_name": "EV_navigation_system",
             "variable_name": "RED",
             "reqs": [
-                "b028bff0-d690-11ef-867f-7339dad409a4"
+                "50657ded-d9a3-11ef-9c7b-47236fd1e2ce"
             ],
             "dataType": "unsigned integer",
             "idType": "Internal",
@@ -1719,8 +1719,8 @@
             "copilotAssignment": "",
             "modeRequirement": "",
             "modeldoc": false,
-            "modeldoc_id": "",
             "modelComponent": "",
+            "modeldoc_id": "",
             "completed": true,
             "_id": "ELEVATEEV_navigation_systemRED"
         },
@@ -1729,7 +1729,7 @@
             "component_name": "EV_navigation_system",
             "variable_name": "YELLOW",
             "reqs": [
-                "514b0e10-d691-11ef-867f-7339dad409a4"
+                "50657de7-d9a3-11ef-9c7b-47236fd1e2ce"
             ],
             "dataType": "unsigned integer",
             "idType": "Internal",
@@ -1739,8 +1739,8 @@
             "copilotAssignment": "",
             "modeRequirement": "",
             "modeldoc": false,
-            "modeldoc_id": "",
             "modelComponent": "",
+            "modeldoc_id": "",
             "completed": true,
             "_id": "ELEVATEEV_navigation_systemYELLOW"
         },
@@ -1749,7 +1749,7 @@
             "component_name": "EV_navigation_system",
             "variable_name": "battery_level",
             "reqs": [
-                "7f433090-d68c-11ef-867f-7339dad409a4"
+                "50657dea-d9a3-11ef-9c7b-47236fd1e2ce"
             ],
             "dataType": "unsigned integer",
             "idType": "Input",
@@ -1759,8 +1759,8 @@
             "copilotAssignment": "",
             "modeRequirement": "",
             "modeldoc": false,
-            "modeldoc_id": "",
             "modelComponent": "",
+            "modeldoc_id": "",
             "completed": true,
             "_id": "ELEVATEEV_navigation_systembattery_level"
         },
@@ -1769,7 +1769,7 @@
             "component_name": "EV_navigation_system",
             "variable_name": "charging_station_nearby",
             "reqs": [
-                "7f433090-d68c-11ef-867f-7339dad409a4"
+                "50657dea-d9a3-11ef-9c7b-47236fd1e2ce"
             ],
             "dataType": "boolean",
             "idType": "Input",
@@ -1779,8 +1779,8 @@
             "copilotAssignment": "",
             "modeRequirement": "",
             "modeldoc": false,
-            "modeldoc_id": "",
             "modelComponent": "",
+            "modeldoc_id": "",
             "completed": true,
             "_id": "ELEVATEEV_navigation_systemcharging_station_nearby"
         },
@@ -1789,7 +1789,7 @@
             "component_name": "EV_navigation_system",
             "variable_name": "continue_search_for_station",
             "reqs": [
-                "7f433090-d68c-11ef-867f-7339dad409a4"
+                "50657dea-d9a3-11ef-9c7b-47236fd1e2ce"
             ],
             "dataType": "boolean",
             "idType": "Output",
@@ -1799,8 +1799,8 @@
             "copilotAssignment": "",
             "modeRequirement": "",
             "modeldoc": false,
-            "modeldoc_id": "",
             "modelComponent": "",
+            "modeldoc_id": "",
             "completed": true,
             "_id": "ELEVATEEV_navigation_systemcontinue_search_for_station"
         },
@@ -1809,7 +1809,7 @@
             "component_name": "EV_navigation_system",
             "variable_name": "distance_to_emergency_vehicle",
             "reqs": [
-                "d10ae990-d691-11ef-867f-7339dad409a4"
+                "50657dee-d9a3-11ef-9c7b-47236fd1e2ce"
             ],
             "dataType": "double",
             "idType": "Input",
@@ -1819,8 +1819,8 @@
             "copilotAssignment": "",
             "modeRequirement": "",
             "modeldoc": false,
-            "modeldoc_id": "",
             "modelComponent": "",
+            "modeldoc_id": "",
             "completed": true,
             "_id": "ELEVATEEV_navigation_systemdistance_to_emergency_vehicle"
         },
@@ -1829,8 +1829,8 @@
             "component_name": "EV_navigation_system",
             "variable_name": "distance_to_light",
             "reqs": [
-                "514b0e10-d691-11ef-867f-7339dad409a4",
-                "b028bff0-d690-11ef-867f-7339dad409a4"
+                "50657de7-d9a3-11ef-9c7b-47236fd1e2ce",
+                "50657ded-d9a3-11ef-9c7b-47236fd1e2ce"
             ],
             "dataType": "double",
             "idType": "Input",
@@ -1840,8 +1840,8 @@
             "copilotAssignment": "",
             "modeRequirement": "",
             "modeldoc": false,
-            "modeldoc_id": "",
             "modelComponent": "",
+            "modeldoc_id": "",
             "completed": true,
             "_id": "ELEVATEEV_navigation_systemdistance_to_light"
         },
@@ -1850,7 +1850,7 @@
             "component_name": "EV_navigation_system",
             "variable_name": "emergency_vehicle_detected",
             "reqs": [
-                "d10ae990-d691-11ef-867f-7339dad409a4"
+                "50657dee-d9a3-11ef-9c7b-47236fd1e2ce"
             ],
             "dataType": "boolean",
             "idType": "Input",
@@ -1860,8 +1860,8 @@
             "copilotAssignment": "",
             "modeRequirement": "",
             "modeldoc": false,
-            "modeldoc_id": "",
             "modelComponent": "",
+            "modeldoc_id": "",
             "completed": true,
             "_id": "ELEVATEEV_navigation_systememergency_vehicle_detected"
         },
@@ -1870,7 +1870,7 @@
             "component_name": "EV_navigation_system",
             "variable_name": "optimal_route_update",
             "reqs": [
-                "17b29600-d68c-11ef-867f-7339dad409a4"
+                "50657de3-d9a3-11ef-9c7b-47236fd1e2ce"
             ],
             "dataType": "boolean",
             "idType": "Output",
@@ -1880,8 +1880,8 @@
             "copilotAssignment": "",
             "modeRequirement": "",
             "modeldoc": false,
-            "modeldoc_id": "",
             "modelComponent": "",
+            "modeldoc_id": "",
             "completed": true,
             "_id": "ELEVATEEV_navigation_systemoptimal_route_update"
         },
@@ -1890,7 +1890,7 @@
             "component_name": "EV_navigation_system",
             "variable_name": "pedestrian_detected",
             "reqs": [
-                "05551a00-d691-11ef-867f-7339dad409a4"
+                "50657de0-d9a3-11ef-9c7b-47236fd1e2ce"
             ],
             "dataType": "boolean",
             "idType": "Input",
@@ -1900,8 +1900,8 @@
             "copilotAssignment": "",
             "modeRequirement": "",
             "modeldoc": false,
-            "modeldoc_id": "",
             "modelComponent": "",
+            "modeldoc_id": "",
             "completed": true,
             "_id": "ELEVATEEV_navigation_systempedestrian_detected"
         },
@@ -1910,7 +1910,7 @@
             "component_name": "EV_navigation_system",
             "variable_name": "road_conditions",
             "reqs": [
-                "9cebbd90-d68e-11ef-867f-7339dad409a4"
+                "50657dec-d9a3-11ef-9c7b-47236fd1e2ce"
             ],
             "dataType": "integer",
             "idType": "Input",
@@ -1920,8 +1920,8 @@
             "copilotAssignment": "",
             "modeRequirement": "",
             "modeldoc": false,
-            "modeldoc_id": "",
             "modelComponent": "",
+            "modeldoc_id": "",
             "completed": true,
             "_id": "ELEVATEEV_navigation_systemroad_conditions"
         },
@@ -1930,10 +1930,10 @@
             "component_name": "EV_navigation_system",
             "variable_name": "stopping_action",
             "reqs": [
-                "05551a00-d691-11ef-867f-7339dad409a4",
-                "514b0e10-d691-11ef-867f-7339dad409a4",
-                "b028bff0-d690-11ef-867f-7339dad409a4",
-                "d10ae990-d691-11ef-867f-7339dad409a4"
+                "50657de0-d9a3-11ef-9c7b-47236fd1e2ce",
+                "50657de7-d9a3-11ef-9c7b-47236fd1e2ce",
+                "50657ded-d9a3-11ef-9c7b-47236fd1e2ce",
+                "50657dee-d9a3-11ef-9c7b-47236fd1e2ce"
             ],
             "dataType": "boolean",
             "idType": "Output",
@@ -1943,8 +1943,8 @@
             "copilotAssignment": "",
             "modeRequirement": "",
             "modeldoc": false,
-            "modeldoc_id": "",
             "modelComponent": "",
+            "modeldoc_id": "",
             "completed": true,
             "_id": "ELEVATEEV_navigation_systemstopping_action"
         },
@@ -1953,7 +1953,7 @@
             "component_name": "EV_navigation_system",
             "variable_name": "traffic_compliance",
             "reqs": [
-                "9cebbd90-d68e-11ef-867f-7339dad409a4"
+                "50657dec-d9a3-11ef-9c7b-47236fd1e2ce"
             ],
             "dataType": "boolean",
             "idType": "Output",
@@ -1963,8 +1963,8 @@
             "copilotAssignment": "",
             "modeRequirement": "",
             "modeldoc": false,
-            "modeldoc_id": "",
             "modelComponent": "",
+            "modeldoc_id": "",
             "completed": true,
             "_id": "ELEVATEEV_navigation_systemtraffic_compliance"
         },
@@ -1973,7 +1973,7 @@
             "component_name": "EV_navigation_system",
             "variable_name": "traffic_conditions",
             "reqs": [
-                "e7ae3780-d68a-11ef-867f-7339dad409a4"
+                "50657def-d9a3-11ef-9c7b-47236fd1e2ce"
             ],
             "dataType": "",
             "idType": "Function",
@@ -1983,8 +1983,8 @@
             "copilotAssignment": "",
             "modeRequirement": "",
             "modeldoc": false,
-            "modeldoc_id": "",
             "modelComponent": "",
+            "modeldoc_id": "",
             "completed": true,
             "_id": "ELEVATEEV_navigation_systemtraffic_conditions"
         },
@@ -1993,7 +1993,7 @@
             "component_name": "EV_navigation_system",
             "variable_name": "traffic_jam_detected",
             "reqs": [
-                "17b29600-d68c-11ef-867f-7339dad409a4"
+                "50657de3-d9a3-11ef-9c7b-47236fd1e2ce"
             ],
             "dataType": "",
             "idType": "Function",
@@ -2003,8 +2003,8 @@
             "copilotAssignment": "",
             "modeRequirement": "",
             "modeldoc": false,
-            "modeldoc_id": "",
             "modelComponent": "",
+            "modeldoc_id": "",
             "completed": true,
             "_id": "ELEVATEEV_navigation_systemtraffic_jam_detected"
         },
@@ -2013,8 +2013,8 @@
             "component_name": "EV_navigation_system",
             "variable_name": "traffic_light_state",
             "reqs": [
-                "514b0e10-d691-11ef-867f-7339dad409a4",
-                "b028bff0-d690-11ef-867f-7339dad409a4"
+                "50657de7-d9a3-11ef-9c7b-47236fd1e2ce",
+                "50657ded-d9a3-11ef-9c7b-47236fd1e2ce"
             ],
             "dataType": "unsigned integer",
             "idType": "Input",
@@ -2024,8 +2024,8 @@
             "copilotAssignment": "",
             "modeRequirement": "",
             "modeldoc": false,
-            "modeldoc_id": "",
             "modelComponent": "",
+            "modeldoc_id": "",
             "completed": true,
             "_id": "ELEVATEEV_navigation_systemtraffic_light_state"
         },
@@ -2034,7 +2034,7 @@
             "component_name": "EV_navigation_system",
             "variable_name": "traffic_rules",
             "reqs": [
-                "9cebbd90-d68e-11ef-867f-7339dad409a4"
+                "50657dec-d9a3-11ef-9c7b-47236fd1e2ce"
             ],
             "dataType": "boolean",
             "idType": "Input",
@@ -2044,8 +2044,8 @@
             "copilotAssignment": "",
             "modeRequirement": "",
             "modeldoc": false,
-            "modeldoc_id": "",
             "modelComponent": "",
+            "modeldoc_id": "",
             "completed": true,
             "_id": "ELEVATEEV_navigation_systemtraffic_rules"
         },
@@ -2054,7 +2054,7 @@
             "component_name": "EV_navigation_system",
             "variable_name": "updated_route",
             "reqs": [
-                "e7ae3780-d68a-11ef-867f-7339dad409a4"
+                "50657def-d9a3-11ef-9c7b-47236fd1e2ce"
             ],
             "dataType": "boolean",
             "idType": "Output",
@@ -2064,8 +2064,8 @@
             "copilotAssignment": "",
             "modeRequirement": "",
             "modeldoc": false,
-            "modeldoc_id": "",
             "modelComponent": "",
+            "modeldoc_id": "",
             "completed": true,
             "_id": "ELEVATEEV_navigation_systemupdated_route"
         }

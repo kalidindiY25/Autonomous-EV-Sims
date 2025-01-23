@@ -1,4 +1,4 @@
-# Requirements for Project `ELEVATE`
+# Requirements for Project `All Projects`
 |ID|P-ID| Text | Rationale |
 |---|---|---|---|
 | REQ-05.02 | REQ-05 | Upon  pedestrian_detected  the  EV_navigation_system  shall  immediately  satisfy  stopping_action  | Ensures pedestrian safety at crossings.
