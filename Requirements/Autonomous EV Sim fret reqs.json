@@ -2,7 +2,7 @@
     {
         "reqid": "REQ-05.02",
         "parent_reqid": "REQ-05",
-        "project": "Autonomous EV Sim",
+        "project": "ELEVATE",
         "rationale": "Ensures pedestrian safety at crossings.",
         "comments": "Covers both marked and unmarked crossings.",
         "fulltext": "Upon  pedestrian_detected  the  EV_navigation_system  shall  immediately  satisfy  stopping_action ",
@@ -72,7 +72,7 @@
     {
         "reqid": "REQ-02.01",
         "parent_reqid": "REQ-02",
-        "project": "Autonomous EV Sim",
+        "project": "ELEVATE",
         "rationale": "Enables timely detection and repair of critical components.",
         "comments": "Ensure that diagnostics are specific to the failed sensor type.",
         "fulltext": " If sensor_malfunction = ON  the  EV_diagnostics_system  shall  immediately  satisfy  failure_flag = ON ",
@@ -143,7 +143,7 @@
     {
         "reqid": "REQ-04",
         "parent_reqid": "",
-        "project": "Autonomous EV Sim",
+        "project": "ELEVATE",
         "rationale": "Prevents accidents by maintaining safe distances from other vehicles and obstacles.",
         "comments": "Includes scenarios for sudden braking, emergency situations, and dynamic proximity management.",
         "fulltext": "The  EV_collision_avoidance_system  shall always satisfy  distance_to_obstacle >= 2 ",
@@ -201,7 +201,7 @@
     {
         "reqid": "REQ-03.01",
         "parent_reqid": "REQ-03",
-        "project": "Autonomous EV Sim",
+        "project": "ELEVATE",
         "rationale": "Minimises delays by adapting to real-time traffic data.",
         "comments": "Test scenarios with sudden congestion in major routes.",
         "fulltext": "Upon  traffic_jam_detected = ON  the  EV_navigation_system  shall  immediately  satisfy  optimal_route_update ",
@@ -272,7 +272,7 @@
     {
         "reqid": "REQ-01.04",
         "parent_reqid": "REQ-01",
-        "project": "Autonomous EV Sim",
+        "project": "ELEVATE",
         "rationale": "Reduces strain on grid during peak hours.",
         "comments": "Integrate predictive algorithms to improve scheduling accuracy.",
         "fulltext": "Upon  receipt_of_charging_request_command & grid_load = low  the  EV_energy_management_system  shall  always  satisfy  grid_load = low ",
@@ -343,7 +343,7 @@
     {
         "reqid": "REQ-01.02",
         "parent_reqid": "REQ-01",
-        "project": "Autonomous EV Sim",
+        "project": "ELEVATE",
         "rationale": "Prevents overcharging and potential battery damage.",
         "comments": "Included with safety checks for sudden battery level anomalies.",
         "fulltext": "The  EV_energy_management_system  shall always satisfy  battery_level <= 100/100 ",
@@ -401,7 +401,7 @@
     {
         "reqid": "REQ-02.02",
         "parent_reqid": "REQ-02",
-        "project": "Autonomous EV Sim",
+        "project": "ELEVATE",
         "rationale": "Ensures proper tracking and resolution of communication errors.",
         "comments": "Include timestamps and error codes in logs.",
         "fulltext": " EV_diagnostics_system  shall always satisfy  failure_log_format ",
@@ -459,7 +459,7 @@
     {
         "reqid": "REQ-05.03",
         "parent_reqid": "REQ-05",
-        "project": "Autonomous EV Sim",
+        "project": "ELEVATE",
         "rationale": "Safely handles transitional traffic light states.",
         "comments": "Include tests for borderline cases with high speeds.",
         "fulltext": "Upon ( traffic_light_state = YELLOW  &  distance_to_light < 20 )  EV_navigation_system  shall at the next timepoint satisfy  stopping_action = ON ",
@@ -532,7 +532,7 @@
     {
         "reqid": "REQ-04.01",
         "parent_reqid": "REQ-04",
-        "project": "Autonomous EV Sim",
+        "project": "ELEVATE",
         "rationale": "Reduces risk pf rear-end collisions.",
         "comments": "Test scenarios with varying road conditions and speeds.",
         "fulltext": "The  EV_collision_avoidance_system  shall always satisfy  distance_to_vehicle_ahead >= 10 ",
@@ -590,7 +590,7 @@
     {
         "reqid": "REQ-02",
         "parent_reqid": "",
-        "project": "Autonomous EV Sim",
+        "project": "ELEVATE",
         "rationale": "Ensures consistent reporting for effective issue tracking and maintenance.",
         "comments": "Applies to fault detection, communication issues, and system performance logs.",
         "fulltext": " EV_diagnostics_system  shall always satisfy  standard_diagnostic_reporting_format ",
@@ -648,7 +648,7 @@
     {
         "reqid": "REQ-03.02",
         "parent_reqid": "REQ-03",
-        "project": "Autonomous EV Sim",
+        "project": "ELEVATE",
         "rationale": "Prevents vehicles from running out of charge in transit.",
         "comments": "Test with sparse charging networks.",
         "fulltext": " EV_navigation_system  shall always satisfy if preBool(false,  battery_level < 20/100  & !(  charging_station_nearby )) then  continue_search_for_station = ON ",
@@ -709,7 +709,7 @@
     {
         "reqid": "REQ-01.01",
         "parent_reqid": "REQ-01",
-        "project": "Autonomous EV Sim",
+        "project": "ELEVATE",
         "rationale": "Minimise non-critical EV operations to prolong battery life.",
         "comments": "Include alert generation when entering low power mode.",
         "fulltext": " EV_energy_management_system  shall always satisfy if ( EV_state = moving  &  battery_level < 20 ) then  low_power_mode = ON ",
@@ -771,7 +771,7 @@
     {
         "reqid": "REQ-05",
         "parent_reqid": "",
-        "project": "Autonomous EV Sim",
+        "project": "ELEVATE",
         "rationale": "Ensures the EV adheres to traffic rules and operates safely within legal boundaries.",
         "comments": "This encompasses stopping at traffic lights, yielding to pedestrians, and adapting to road signs.",
         "fulltext": " EV_navigation_system  shall always satisfy if ( traffic_rules = ACTIVE  &  road_conditions = NORMAL ) then  traffic_compliance = ON ",
@@ -834,7 +834,7 @@
     {
         "reqid": "REQ-05.01",
         "parent_reqid": "REQ-05",
-        "project": "Autonomous EV Sim",
+        "project": "ELEVATE",
         "rationale": "",
         "comments": "",
         "fulltext": " EV_navigation_system  shall always satisfy if ( traffic_light_state = RED  &  distance_to_light < 50 ) then  stopping_action = ON ",
@@ -896,7 +896,7 @@
     {
         "reqid": "REQ-05.04",
         "parent_reqid": "REQ-05",
-        "project": "Autonomous EV Sim",
+        "project": "ELEVATE",
         "rationale": "Ensures compliance with traffic laws requiring vehicles to yield to emergency responders.",
         "comments": "Ensure emergency vehicle detection accuracy is high.",
         "fulltext": " EV_navigation_system  shall always satisfy if ( emergency_vehicle_detected = ON  &  distance_to_emergency_vehicle < 20 ) then  stopping_action = ON ",
@@ -957,7 +957,7 @@
     {
         "reqid": "REQ-03",
         "parent_reqid": "",
-        "project": "Autonomous EV Sim",
+        "project": "ELEVATE",
         "rationale": "Dynamically adjusts routing to reduce delays and improve overall efficiency.",
         "comments": "Covers real-time re-routing and prioritization of charging stations.",
         "fulltext": "Upon ( traffic_conditions = CONGESTED  &  EV_routing_request = ON )  EV_navigation_system  shall at the next timepoint satisfy  updated_route = OPTIMAL ",
@@ -1031,7 +1031,7 @@
     {
         "reqid": "REQ-01.03",
         "parent_reqid": "REQ-01",
-        "project": "Autonomous EV Sim",
+        "project": "ELEVATE",
         "rationale": "Stabilises grid during peak electricity demand using EVs as distributed storage units.",
         "comments": "Puts focus on testing grid demand prediction algorithms.",
         "fulltext": " If grid_demand_peak = YES  the  EV_energy_management_system  shall  within 5 seconds  satisfy  EV_discharge_mode = ON ",
@@ -1104,7 +1104,7 @@
     {
         "reqid": "REQ-01",
         "parent_reqid": "",
-        "project": "Autonomous EV Sim",
+        "project": "ELEVATE",
         "rationale": "Enables efficient battery management to prolong operational time and support grid stabilisation.",
         "comments": "Includes managing low battery alerts, charging schedules, and grid integration. 'optimal_battery_usage' is a binary state value, '1' is true and '0' is false.",
         "fulltext": " If energy_efficiency_mode = ON  the  EV_energy_management_system  shall  immediately  satisfy  optimal_battery_usage = ON ",
