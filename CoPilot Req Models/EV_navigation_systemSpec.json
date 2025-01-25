@@ -1,0 +1,156 @@
+
+{
+  "EV_navigation_systemSpec":
+  {
+
+"Internal_variables":
+[
+
+  
+{"name":"ACTIVE", "type":"bool", "assignmentLustre": "traffic_rules", "assignmentCopilot": ""},
+
+
+  
+{"name":"CONGESTED", "type":"bool", "assignmentLustre": "traffic_conditions", "assignmentCopilot": ""},
+
+
+  
+{"name":"NORMAL", "type":"bool", "assignmentLustre": "road_conditions", "assignmentCopilot": ""},
+
+
+  
+{"name":"ON", "type":"bool", "assignmentLustre": "1", "assignmentCopilot": ""},
+
+
+  
+{"name":"OPTIMAL", "type":"bool", "assignmentLustre": "updated_route", "assignmentCopilot": ""},
+
+
+  
+{"name":"RED", "type":"int", "assignmentLustre": "traffic_light_state", "assignmentCopilot": ""},
+
+
+  
+{"name":"YELLOW", "type":"int", "assignmentLustre": "traffic_light_state", "assignmentCopilot": ""}
+ 
+
+],
+
+"Other_variables":
+[
+
+  
+  {"name":"EV_routing_request", "type":"bool"},
+ 
+
+  
+  {"name":"battery_level", "type":"int"},
+ 
+
+  
+  {"name":"charging_station_nearby", "type":"bool"},
+ 
+
+  
+  {"name":"distance_to_emergency_vehicle", "type":"real"},
+ 
+
+  
+  {"name":"distance_to_light", "type":"real"},
+ 
+
+  
+  {"name":"emergency_vehicle_detected", "type":"bool"},
+ 
+
+  
+  {"name":"pedestrian_detected", "type":"bool"},
+ 
+
+  
+  {"name":"road_conditions", "type":"int"},
+ 
+
+  
+  {"name":"traffic_light_state", "type":"int"},
+ 
+
+  
+  {"name":"traffic_rules", "type":"bool"},
+ 
+
+
+  
+{"name":"continue_search_for_station", "type":"bool"},
+
+ 
+  
+{"name":"optimal_route_update", "type":"bool"},
+
+ 
+  
+{"name":"stopping_action", "type":"bool"},
+
+ 
+  
+{"name":"traffic_compliance", "type":"bool"},
+
+ 
+  
+  {"name":"updated_route", "type":"bool"}
+  
+ 
+],
+
+"Functions":
+[
+
+
+ {"name":"traffic_conditions", "moduleName":"TrafficAnalyser"},
+ 
+
+
+{"name":"traffic_jam_detected", "moduleName":"TrafficAnalyser"}
+  
+
+],
+
+"Requirements":
+[
+
+  
+{ "name": "REQ-05.02", "ptLTL": "(H ((pedestrian_detected & (Z (! pedestrian_detected))) -> stopping_action))", "CoCoSpecCode": "H(((pedestrian_detected and ZtoPre(not (pedestrian_detected))) => stopping_action))", "fretish": "Upon  pedestrian_detected  the  EV_navigation_system  shall  immediately  satisfy  stopping_action "},
+
+ 
+  
+{ "name": "REQ-03.01", "ptLTL": "(H (((traffic_jam_detected = ON) & (Z (! (traffic_jam_detected = ON)))) -> optimal_route_update))", "CoCoSpecCode": "H((((traffic_jam_detected = ON) and ZtoPre(not ((traffic_jam_detected = ON)))) => optimal_route_update))", "fretish": "Upon  traffic_jam_detected = ON  the  EV_navigation_system  shall  immediately  satisfy  optimal_route_update "},
+
+ 
+  
+{ "name": "REQ-05.03", "ptLTL": "(H ((Y (((traffic_light_state = YELLOW) & (distance_to_light < 20)) & (Z (! ((traffic_light_state = YELLOW) & (distance_to_light < 20)))))) -> ((stopping_action = ON) | (Z FALSE))))", "CoCoSpecCode": "H((YtoPre((((traffic_light_state = YELLOW) and (distance_to_light < 20)) and ZtoPre(not (((traffic_light_state = YELLOW) and (distance_to_light < 20)))))) => ((stopping_action = ON) or ZtoPre(false))))", "fretish": "Upon ( traffic_light_state = YELLOW  &  distance_to_light < 20 )  EV_navigation_system  shall at the next timepoint satisfy  stopping_action = ON "},
+
+ 
+  
+{ "name": "REQ-03.02", "ptLTL": "(H ((Y ((battery_level < (20 / 100)) & (! charging_station_nearby))) -> (continue_search_for_station = ON)))", "CoCoSpecCode": "H((YtoPre(((battery_level < (20 / 100)) and not (charging_station_nearby))) => (continue_search_for_station = ON)))", "fretish": " EV_navigation_system  shall always satisfy if preBool(false,  battery_level < 20/100  & !(  charging_station_nearby )) then  continue_search_for_station = ON "},
+
+ 
+  
+{ "name": "REQ-05", "ptLTL": "(H (((traffic_rules = ACTIVE) & (road_conditions = NORMAL)) -> (traffic_compliance = ON)))", "CoCoSpecCode": "H((((traffic_rules = ACTIVE) and (road_conditions = NORMAL)) => (traffic_compliance = ON)))", "fretish": " EV_navigation_system  shall always satisfy if ( traffic_rules = ACTIVE  &  road_conditions = NORMAL ) then  traffic_compliance = ON "},
+
+ 
+  
+{ "name": "REQ-05.01", "ptLTL": "(H (((traffic_light_state = RED) & (distance_to_light < 50)) -> (stopping_action = ON)))", "CoCoSpecCode": "H((((traffic_light_state = RED) and (distance_to_light < 50)) => (stopping_action = ON)))", "fretish": " EV_navigation_system  shall always satisfy if ( traffic_light_state = RED  &  distance_to_light < 50 ) then  stopping_action = ON "},
+
+ 
+  
+{ "name": "REQ-05.04", "ptLTL": "(H (((emergency_vehicle_detected = ON) & (distance_to_emergency_vehicle < 20)) -> (stopping_action = ON)))", "CoCoSpecCode": "H((((emergency_vehicle_detected = ON) and (distance_to_emergency_vehicle < 20)) => (stopping_action = ON)))", "fretish": " EV_navigation_system  shall always satisfy if ( emergency_vehicle_detected = ON  &  distance_to_emergency_vehicle < 20 ) then  stopping_action = ON "},
+
+ 
+  
+{ "name": "REQ-03", "ptLTL": "(H ((Y (((traffic_conditions = CONGESTED) & (EV_routing_request = ON)) & (Z (! ((traffic_conditions = CONGESTED) & (EV_routing_request = ON)))))) -> ((updated_route = OPTIMAL) | (Z FALSE))))", "CoCoSpecCode": "H((YtoPre((((traffic_conditions = CONGESTED) and (EV_routing_request = ON)) and ZtoPre(not (((traffic_conditions = CONGESTED) and (EV_routing_request = ON)))))) => ((updated_route = OPTIMAL) or ZtoPre(false))))", "fretish": "Upon ( traffic_conditions = CONGESTED  &  EV_routing_request = ON )  EV_navigation_system  shall at the next timepoint satisfy  updated_route = OPTIMAL "}
+  
+ 
+]
+}
+}
+

@@ -1,0 +1,100 @@
+
+{
+  "EV_energy_management_systemSpec":
+  {
+
+"Internal_variables":
+[
+
+  
+{"name":"ON", "type":"bool", "assignmentLustre": "1", "assignmentCopilot": ""},
+
+
+  
+{"name":"YES", "type":"bool", "assignmentLustre": "grid_demand_peak", "assignmentCopilot": ""},
+
+
+  
+{"name":"low", "type":"bool", "assignmentLustre": "grid_load", "assignmentCopilot": ""},
+
+
+  
+{"name":"moving", "type":"bool", "assignmentLustre": "EV_state", "assignmentCopilot": ""},
+
+
+  
+{"name":"EV_discharge_mode", "type":"bool", "assignmentLustre": "if grid_demand_peak = LOW then EV_discharge_mode = ON", "assignmentCopilot": ""},
+
+
+  
+{"name":"EV_state", "type":"bool", "assignmentLustre": "if battery_level < 20 then EV_state = LOW_POWER", "assignmentCopilot": ""},
+
+
+  
+{"name":"energy_efficiency_mode", "type":"bool", "assignmentLustre": "if energy_efficiency_mode = ON then optimal_battery_usage = ON", "assignmentCopilot": ""}
+ 
+
+],
+
+"Other_variables":
+[
+
+  
+  {"name":"battery_level", "type":"int"},
+ 
+
+  
+  {"name":"grid_load", "type":"real"},
+ 
+
+  
+  {"name":"receipt_of_charging_request_command", "type":"bool"},
+ 
+
+
+  
+{"name":"low_power_mode", "type":"bool"},
+
+ 
+  
+  {"name":"optimal_battery_usage", "type":"bool"}
+  
+ 
+],
+
+"Functions":
+[
+
+
+{"name":"grid_demand_peak", "moduleName":"GridMonitor"}
+  
+
+],
+
+"Requirements":
+[
+
+  
+{ "name": "REQ-01.04", "ptLTL": "(H ((H (! (receipt_of_charging_request_command & (grid_load = low)))) | (grid_load = low)))", "CoCoSpecCode": "H((H(not ((receipt_of_charging_request_command and (grid_load = low)))) or (grid_load = low)))", "fretish": "Upon  receipt_of_charging_request_command & grid_load = low  the  EV_energy_management_system  shall  always  satisfy  grid_load = low "},
+
+ 
+  
+{ "name": "REQ-01.02", "ptLTL": "(H (battery_level <= (100 / 100)))", "CoCoSpecCode": "H((battery_level <= (100 / 100)))", "fretish": "The  EV_energy_management_system  shall always satisfy  battery_level <= 100/100 "},
+
+ 
+  
+{ "name": "REQ-01.01", "ptLTL": "(H (((EV_state = moving) & (battery_level < 20)) -> (low_power_mode = ON)))", "CoCoSpecCode": "H((((EV_state = moving) and (battery_level < 20)) => (low_power_mode = ON)))", "fretish": " EV_energy_management_system  shall always satisfy if ( EV_state = moving  &  battery_level < 20 ) then  low_power_mode = ON "},
+
+ 
+  
+{ "name": "REQ-01.03", "ptLTL": "(H ((O[5,5] (((grid_demand_peak = YES) & (Z (! (grid_demand_peak = YES)))) & (! (EV_discharge_mode = ON)))) -> (O[0,4] ((Z FALSE) | (EV_discharge_mode = ON)))))", "CoCoSpecCode": "H((OT(5, 5, (((grid_demand_peak = YES) and ZtoPre(not ((grid_demand_peak = YES)))) and not ((EV_discharge_mode = ON)))) => OT(4, 0, (ZtoPre(false) or (EV_discharge_mode = ON)))))", "fretish": " If grid_demand_peak = YES  the  EV_energy_management_system  shall  within 5 seconds  satisfy  EV_discharge_mode = ON "},
+
+ 
+  
+{ "name": "REQ-01", "ptLTL": "(H (((energy_efficiency_mode = ON) & (Z (! (energy_efficiency_mode = ON)))) -> (optimal_battery_usage = ON)))", "CoCoSpecCode": "H((((energy_efficiency_mode = ON) and ZtoPre(not ((energy_efficiency_mode = ON)))) => (optimal_battery_usage = ON)))", "fretish": " If energy_efficiency_mode = ON  the  EV_energy_management_system  shall  immediately  satisfy  optimal_battery_usage = ON "}
+  
+ 
+]
+}
+}
+

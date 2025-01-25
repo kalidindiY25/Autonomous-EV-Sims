@@ -1,0 +1,44 @@
+
+{
+  "EV_collision_avoidance_systemSpec":
+  {
+
+"Internal_variables":
+[
+
+],
+
+"Other_variables":
+[
+
+  
+  {"name":"distance_to_obstacle", "type":"real"},
+ 
+
+  
+{"name":"distance_to_vehicle_ahead", "type":"real"}
+
+
+
+],
+
+"Functions":
+[
+
+],
+
+"Requirements":
+[
+
+  
+{ "name": "REQ-04", "ptLTL": "(H (distance_to_obstacle >= 2))", "CoCoSpecCode": "H((distance_to_obstacle >= 2))", "fretish": "The  EV_collision_avoidance_system  shall always satisfy  distance_to_obstacle >= 2 "},
+
+ 
+  
+{ "name": "REQ-04.01", "ptLTL": "(H (distance_to_vehicle_ahead >= 10))", "CoCoSpecCode": "H((distance_to_vehicle_ahead >= 10))", "fretish": "The  EV_collision_avoidance_system  shall always satisfy  distance_to_vehicle_ahead >= 10 "}
+  
+ 
+]
+}
+}
+

@@ -1,0 +1,60 @@
+
+{
+  "EV_diagnostics_systemSpec":
+  {
+
+"Internal_variables":
+[
+
+  
+{"name":"ON", "type":"bool", "assignmentLustre": "1", "assignmentCopilot": ""},
+
+
+  
+{"name":"failure_log_format", "type":"int", "assignmentLustre": "standard_diagnostic_reporting_format", "assignmentCopilot": ""}
+ 
+
+],
+
+"Other_variables":
+[
+
+  
+  {"name":"standard_diagnostic_reporting_format", "type":"int"},
+ 
+
+
+  
+  {"name":"failure_flag", "type":"bool"}
+  
+ 
+],
+
+"Functions":
+[
+
+
+{"name":"sensor_malfunction", "moduleName":"SensorMonitor"}
+  
+
+],
+
+"Requirements":
+[
+
+  
+{ "name": "REQ-02.01", "ptLTL": "(H (((sensor_malfunction = ON) & (Z (! (sensor_malfunction = ON)))) -> (failure_flag = ON)))", "CoCoSpecCode": "H((((sensor_malfunction = ON) and ZtoPre(not ((sensor_malfunction = ON)))) => (failure_flag = ON)))", "fretish": " If sensor_malfunction = ON  the  EV_diagnostics_system  shall  immediately  satisfy  failure_flag = ON "},
+
+ 
+  
+{ "name": "REQ-02.02", "ptLTL": "(H failure_log_format)", "CoCoSpecCode": "H(failure_log_format)", "fretish": " EV_diagnostics_system  shall always satisfy  failure_log_format "},
+
+ 
+  
+{ "name": "REQ-02", "ptLTL": "(H standard_diagnostic_reporting_format)", "CoCoSpecCode": "H(standard_diagnostic_reporting_format)", "fretish": " EV_diagnostics_system  shall always satisfy  standard_diagnostic_reporting_format "}
+  
+ 
+]
+}
+}
+
